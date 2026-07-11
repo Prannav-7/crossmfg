@@ -14,9 +14,9 @@ export default function Quality() {
 
       {/* Page Hero */}
       <section className="relative bg-slate-900 text-white py-16 md:py-24">
-        <div className="absolute inset-0 opacity-[0.02] pointer-events-none" 
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none"
           style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 lg:px-16 xl:px-24 text-center">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-white/10 border border-white/10 text-xs font-heading font-700 uppercase tracking-wider text-brand-blue-light mb-4">
             Quality Assurance Policy
@@ -44,7 +44,7 @@ export default function Quality() {
               <p className="text-text-muted text-base leading-relaxed max-w-2xl mx-auto mb-8">
                 "Cross Manufacturing Company is committed to providing precision engineering solutions that align with client blueprint drawings and delivery schedules. We achieve this by enforcing a zero-defect mindset, structured process validations, and continuous employee training."
               </p>
-              
+
               <div className="flex flex-wrap justify-center gap-3">
                 {['Zero Defect Strategy', 'Blueprint Traceability', 'KAIZEN Efficiency', 'ISO Compliance Standards'].map((tag) => (
                   <span key={tag} className="px-3.5 py-1 text-xs font-heading font-700 uppercase tracking-wider bg-white border border-border-slate rounded text-brand-blue">
@@ -61,11 +61,11 @@ export default function Quality() {
       <section className="section-pad bg-light-bg border-y border-border-slate">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <SectionHeading 
-              eyebrow="Verification Gates" 
-              title="Our Quality Control Process" 
-              subtitle="CMC operates 5 distinct inspection gates to certify dimensional accuracy across batch productions." 
-              center 
+            <SectionHeading
+              eyebrow="Verification Gates"
+              title="Our Quality Control Process"
+              subtitle="CMC operates 5 distinct inspection gates to certify dimensional accuracy across batch productions."
+              center
             />
           </ScrollReveal>
 

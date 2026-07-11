@@ -14,10 +14,10 @@ import SectionHeading from '../components/ui/SectionHeading';
 
 const iconMap = {
   precision: <Zap size={22} className="text-brand-blue" />,
-  oem:       <Users size={22} className="text-brand-blue" />,
-  kaizen:    <Award size={22} className="text-brand-blue" />,
-  quality:   <Shield size={22} className="text-brand-blue" />,
-  capacity:  <Factory size={22} className="text-brand-blue" />,
+  oem: <Users size={22} className="text-brand-blue" />,
+  kaizen: <Award size={22} className="text-brand-blue" />,
+  quality: <Shield size={22} className="text-brand-blue" />,
+  capacity: <Factory size={22} className="text-brand-blue" />,
   expertise: <Target size={22} className="text-brand-blue" />,
 };
 
@@ -34,12 +34,12 @@ export default function Home() {
       ════════════════════════════════════════════════════════════ */}
       <section className="relative hero-gradient text-white overflow-hidden py-24 md:py-32">
         {/* Subtle grid pattern background */}
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
           style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 lg:px-16 xl:px-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Hero Content */}
             <div className="lg:col-span-7">
               <motion.div
@@ -109,39 +109,30 @@ export default function Home() {
               </motion.div>
             </div>
 
-            {/* Right Hero Visual Showcase */}
+            {/* Right Hero Visual Showcase (Real Manufacturing Shop Floor Image) */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="lg:col-span-5 relative hidden lg:block"
             >
-              <div className="bg-slate-800/80 border border-slate-700 rounded-2xl p-8 shadow-2xl backdrop-blur">
-                <div className="flex items-center justify-between pb-4 mb-6 border-b border-slate-700">
-                  <span className="text-xs font-heading font-800 tracking-wider text-slate-400 uppercase">Operational Excellence</span>
-                  <span className="px-2 py-0.5 rounded text-[10px] font-heading font-700 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                    OEM AUDITED
-                  </span>
-                </div>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-700 group">
+                <img
+                  src="/images/manufacturing_shop.png"
+                  alt="CMC Precision Machining Facility"
+                  className="w-full h-[420px] object-cover transition-transform duration-500 group-hover:scale-102"
+                />
+                {/* Clean dark gradient overlay for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
 
-                <div className="space-y-4">
-                  <div className="p-4 bg-slate-900/60 rounded-lg border border-slate-700/50">
-                    <span className="text-xs font-heading font-700 text-slate-400 uppercase tracking-wider">Core Machining Capabilities</span>
-                    <p className="text-white font-heading font-700 text-base mt-1">CNC Precision Turning & Grinding</p>
-                    <p className="text-slate-400 text-xs mt-1">Multi-axis setups with in-process gauging</p>
+                {/* Floating Info Overlay */}
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="text-[10px] font-heading font-800 tracking-wider text-slate-300 uppercase">Factory Status: Online</span>
                   </div>
-
-                  <div className="p-4 bg-slate-900/60 rounded-lg border border-slate-700/50">
-                    <span className="text-xs font-heading font-700 text-slate-400 uppercase tracking-wider">Quality Assurance</span>
-                    <p className="text-white font-heading font-700 text-base mt-1">3D CMM & Metrology Testing</p>
-                    <p className="text-slate-400 text-xs mt-1">Comprehensive inspection documentation and traceability</p>
-                  </div>
-
-                  <div className="p-4 bg-slate-900/60 rounded-lg border border-slate-700/50">
-                    <span className="text-xs font-heading font-700 text-slate-400 uppercase tracking-wider">Supply Chain Reliability</span>
-                    <p className="text-white font-heading font-700 text-base mt-1">Just-In-Time (JIT) Delivery Models</p>
-                    <p className="text-slate-400 text-xs mt-1">Serving major OEMs with robust logistics</p>
-                  </div>
+                  <h3 className="font-heading font-800 text-lg text-white mb-1">Chennai Unit I CNC Operations</h3>
+                  <p className="text-slate-300 text-xs leading-relaxed">Advanced multi-axis turning, grinding and metrology centers serving leading tractor OEMs.</p>
                 </div>
               </div>
             </motion.div>
@@ -153,10 +144,12 @@ export default function Home() {
       {/* ── ── STATS BANNER ── ── */}
       <section className="bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 xl:px-24 py-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 divide-x divide-slate-100">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((stat, i) => (
               <ScrollReveal key={stat.label} delay={i * 0.1}>
-                <StatCounter value={stat.value} suffix={stat.suffix} label={stat.label} />
+                <div className="border-r border-slate-100 last:border-r-0 max-lg:border-r-0">
+                  <StatCounter value={stat.value} suffix={stat.suffix} label={stat.label} />
+                </div>
               </ScrollReveal>
             ))}
           </div>
@@ -166,7 +159,7 @@ export default function Home() {
       {/* ── ── ABOUT SECTION ── ── */}
       <section className="section-pad bg-light-bg">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
+
           <ScrollReveal direction="left">
             <SectionHeading
               eyebrow="Corporate Profile"
@@ -189,7 +182,7 @@ export default function Home() {
               <h3 className="font-heading font-700 text-xl text-text-dark mb-6 pb-4 border-b border-border-slate uppercase tracking-wide">
                 OEM Delivery Metrics
               </h3>
-              
+
               <div className="space-y-6">
                 {[
                   { label: 'Quality Acceptance Rate', value: '99.8%' },
@@ -271,12 +264,12 @@ export default function Home() {
           <ScrollReveal>
             <div className="bg-slate-900 text-white rounded-2xl p-8 md:p-12 relative overflow-hidden border border-slate-800 shadow-xl">
               <div className="absolute top-0 right-0 w-64 h-64 bg-brand-blue/10 rounded-full blur-3xl pointer-events-none" />
-              
+
               <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
                 <div className="w-20 h-20 rounded-full bg-brand-blue flex items-center justify-center shrink-0 shadow-lg text-white">
                   <Award size={36} />
                 </div>
-                
+
                 <div>
                   <span className="inline-block text-brand-blue-light text-xs font-heading font-700 uppercase tracking-widest mb-2">
                     TAFE OEM Recognition
@@ -310,7 +303,7 @@ export default function Home() {
               Submit your RFQ sheets, tolerance drawings or product descriptions to our technical representatives for quick estimations.
             </p>
           </div>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 shrink-0">
             <a href={siteConfig.emailHref} className="btn-primary">
               <Mail size={16} /> Submit RFQ / Email

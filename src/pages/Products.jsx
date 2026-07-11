@@ -23,9 +23,9 @@ export default function Products() {
 
       {/* Page Hero */}
       <section className="relative bg-slate-900 text-white py-16 md:py-24">
-        <div className="absolute inset-0 opacity-[0.02] pointer-events-none" 
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none"
           style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 lg:px-16 xl:px-24 text-center">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-white/10 border border-white/10 text-xs font-heading font-700 uppercase tracking-wider text-brand-blue-light mb-4">
             Product Catalogue
@@ -48,11 +48,10 @@ export default function Products() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded font-heading font-700 text-xs uppercase tracking-wider transition-all border ${
-                  isActive
+                className={`px-4 py-2 rounded font-heading font-700 text-xs uppercase tracking-wider transition-all border ${isActive
                     ? 'bg-brand-blue border-brand-blue text-white shadow-sm'
                     : 'bg-white border-slate-200 text-text-muted hover:text-text-dark hover:border-slate-400'
-                }`}
+                  }`}
               >
                 {cat}
               </button>

@@ -15,9 +15,9 @@ export default function Infrastructure() {
 
       {/* Page Hero */}
       <section className="relative bg-slate-900 text-white py-16 md:py-24">
-        <div className="absolute inset-0 opacity-[0.02] pointer-events-none" 
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none"
           style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 lg:px-16 xl:px-24 text-center">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-white/10 border border-white/10 text-xs font-heading font-700 uppercase tracking-wider text-brand-blue-light mb-4">
             Production Facilities
@@ -35,10 +35,10 @@ export default function Infrastructure() {
       <section className="section-pad bg-white">
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
-            <SectionHeading 
-              eyebrow="Dual Facilities" 
-              title="State-of-the-Art Production Units" 
-              subtitle="CMC houses modern machinery arrays at Poonamallee and Thirumazhisai SIDCO, enabling flexible setup changes and high volume output." 
+            <SectionHeading
+              eyebrow="Dual Facilities"
+              title="State-of-the-Art Production Units"
+              subtitle="CMC houses modern machinery arrays at Poonamallee and Thirumazhisai SIDCO, enabling flexible setup changes and high volume output."
             />
           </ScrollReveal>
 
@@ -59,7 +59,7 @@ export default function Infrastructure() {
                     <h3 className="font-heading font-800 text-xl text-text-dark mb-2">
                       {unit.name}
                     </h3>
-                    
+
                     <div className="flex items-start gap-2 text-text-muted text-xs mb-4">
                       <MapPin size={14} className="text-brand-blue shrink-0 mt-0.5" />
                       <span>{unit.address}</span>
@@ -105,11 +105,11 @@ export default function Infrastructure() {
       <section className="section-pad bg-light-bg border-y border-border-slate">
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
-            <SectionHeading 
-              eyebrow="Tooling Assets" 
-              title="CNC & Machining Equipment List" 
-              subtitle="Below is the breakdown of key manufacturing equipment installed across our units." 
-              center 
+            <SectionHeading
+              eyebrow="Tooling Assets"
+              title="CNC & Machining Equipment List"
+              subtitle="Below is the breakdown of key manufacturing equipment installed across our units."
+              center
             />
           </ScrollReveal>
 

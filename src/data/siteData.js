@@ -56,7 +56,7 @@ export const products = [
     category: 'Tractor',
     description: 'High-precision differential cross components manufactured for major tractor OEMs. Broached and ground to tight tolerances.',
     specs: ['Material: Case-hardened steel', 'Tolerance: ±0.01mm', 'Process: Broaching + Grinding'],
-    image: null,
+    image: '/images/differential_cross.png',
   },
   {
     id: 2,
@@ -64,7 +64,7 @@ export const products = [
     category: 'Hydraulic',
     description: 'Precision-machined hydraulic pump pistons with superior surface finish for optimal sealing performance.',
     specs: ['Material: EN 24 Steel', 'Surface Finish: Ra 0.4', 'Process: CNC Turning + Grinding'],
-    image: null,
+    image: '/images/hydraulic_piston.png',
   },
   {
     id: 3,
@@ -72,7 +72,7 @@ export const products = [
     category: 'Hydraulic',
     description: 'Camshafts designed for hydraulic pumps, featuring precision ground profiles for consistent fluid displacement.',
     specs: ['Material: EN 353', 'Hardness: 58-62 HRC', 'Process: CNC Machining + Profile Grinding'],
-    image: null,
+    image: '/images/hydraulic_piston.png',
   },
   {
     id: 4,
@@ -96,7 +96,7 @@ export const products = [
     category: 'Tractor',
     description: 'Various broached components for tractor assemblies, manufactured with tight dimensional control.',
     specs: ['Material: Various grades', 'Process: Internal/External Broaching', 'Batch Size: High Volume'],
-    image: null,
+    image: '/images/differential_cross.png',
   },
   {
     id: 7,
@@ -104,7 +104,7 @@ export const products = [
     category: 'CNC',
     description: 'Custom CNC-machined precision components for diverse engineering applications across industries.',
     specs: ['Material: As per spec', 'Tolerance: ±0.01mm', 'Process: Multi-axis CNC Machining'],
-    image: null,
+    image: '/images/cnc_components.png',
   },
   {
     id: 8,
@@ -112,7 +112,7 @@ export const products = [
     category: 'CNC',
     description: 'High-precision turned and ground shafts for automobile and general engineering applications.',
     specs: ['Diameter Range: 10-150mm', 'Length: Up to 500mm', 'Process: CNC Turning + Cylindrical Grinding'],
-    image: null,
+    image: '/images/cnc_components.png',
   },
 ];
 

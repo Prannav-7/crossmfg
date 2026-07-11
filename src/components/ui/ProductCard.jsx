@@ -3,10 +3,10 @@ import { Settings } from 'lucide-react';
 export default function ProductCard({ product }) {
   // Category badge styles
   const categoryStyles = {
-    'Tractor':       'bg-blue-50 text-blue-700 border-blue-200',
-    'Hydraulic':     'bg-sky-50 text-sky-700 border-sky-200',
-    'Valve Actuator':'bg-indigo-50 text-indigo-700 border-indigo-200',
-    'CNC':           'bg-slate-100 text-slate-700 border-slate-200',
+    'Tractor': 'bg-blue-50 text-blue-700 border-blue-200',
+    'Hydraulic': 'bg-sky-50 text-sky-700 border-sky-200',
+    'Valve Actuator': 'bg-indigo-50 text-indigo-700 border-indigo-200',
+    'CNC': 'bg-slate-100 text-slate-700 border-slate-200',
   };
   const categoryClass = categoryStyles[product.category] || 'bg-slate-100 text-slate-700 border-slate-200';
 
