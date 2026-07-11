@@ -18,7 +18,7 @@ export default function ContactForm() {
     const body = encodeURIComponent(
       `Name: ${data.name}\nPhone: ${data.phone}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
     );
-    window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${siteConfig.email}&su=${subject}&body=${body}`, '_blank');
     setSubmitted(true);
     reset();
     setTimeout(() => setSubmitted(false), 5000);

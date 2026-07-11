@@ -8,7 +8,7 @@ export const siteConfig = {
   phone: '+91 98843 91672',
   phoneHref: 'tel:+919884391672',
   email: 'customercare@crossmfg.in',
-  emailHref: 'mailto:customercare@crossmfg.in',
+  emailHref: 'https://mail.google.com/mail/?view=cm&fs=1&to=customercare@crossmfg.in&su=OEM%20Machined%20Components%20Enquiry',
   website: 'https://crossmfg.in',
   established: 1989,
   logo: '/images/CrossMfg-Logo-2.png',
@@ -80,7 +80,7 @@ export const products = [
     category: 'Valve Actuator',
     description: 'Critical valve actuator centre columns machined to exacting standards for reliable performance in demanding applications.',
     specs: ['Material: Alloy Steel', 'Tolerance: ±0.005mm', 'Process: CNC Turning + Honing'],
-    image: null,
+    image: '/images/centre_column.png',
   },
   {
     id: 5,
@@ -88,7 +88,7 @@ export const products = [
     category: 'Valve Actuator',
     description: 'Precision clutch rings for valve actuator assemblies, ensuring smooth engagement and long service life.',
     specs: ['Material: EN 19', 'Surface Treatment: Phosphating', 'Process: Turning + Broaching'],
-    image: null,
+    image: '/images/clutch_ring.png',
   },
   {
     id: 6,

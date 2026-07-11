@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Cog } from 'lucide-react';
-import { products, productCategories } from '../data/siteData';
+import { products, productCategories, siteConfig } from '../data/siteData';
 import ProductCard from '../components/ui/ProductCard';
 import SectionHeading from '../components/ui/SectionHeading';
 import ScrollReveal from '../components/ui/ScrollReveal';
@@ -107,7 +107,7 @@ export default function Products() {
           <p className="text-text-muted text-sm mb-6 max-w-xl mx-auto">
             Our facilities support a wide range of tooling setups. Email your CAD designs and specifications to our technical division.
           </p>
-          <a href="mailto:customercare@crossmfg.in" className="btn-primary">
+          <a href={siteConfig.emailHref} target="_blank" rel="noopener noreferrer" className="btn-primary">
             Submit Specifications (RFQ)
           </a>
         </ScrollReveal>
