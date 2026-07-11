@@ -1,4 +1,5 @@
-import { Settings } from 'lucide-react';
+import { Settings, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function ProductCard({ product }) {
   // Category badge styles
@@ -38,24 +39,34 @@ export default function ProductCard({ product }) {
         <h3 className="font-heading font-700 text-lg text-text-dark mb-2 group-hover:text-brand-blue transition-colors duration-200">
           {product.name}
         </h3>
-        <p className="text-text-muted text-sm leading-relaxed mb-4 flex-1">
+        <p className="text-text-muted text-sm leading-relaxed mb-4 line-clamp-2">
           {product.description}
         </p>
 
-        {/* Technical Specs */}
+        {/* Technical Specs Summary */}
         {product.specs?.length > 0 && (
-          <div className="pt-4 border-t border-border-slate flex flex-col gap-1.5">
+          <div className="pt-4 border-t border-border-slate flex flex-col gap-1.5 mb-5">
             <span className="text-[10px] font-heading font-800 uppercase tracking-wider text-slate-400">
-              Technical Specifications
+              Key Parameters
             </span>
-            {product.specs.map((spec, i) => (
-              <div key={i} className="flex items-center gap-2 text-xs text-text-muted font-mono">
+            {product.specs.slice(0, 3).map((spec, i) => (
+              <div key={i} className="flex items-center gap-2 text-xs text-text-muted font-mono truncate">
                 <span className="w-1 h-1 rounded-full bg-brand-blue" />
                 {spec}
               </div>
             ))}
           </div>
         )}
+
+        {/* Action Link to Detail Page */}
+        <div className="mt-auto pt-4 border-t border-slate-100">
+          <Link 
+            to={`/products/${product.id}`}
+            className="text-xs font-heading font-700 uppercase tracking-wider text-brand-blue hover:text-slate-900 inline-flex items-center gap-1.5 group/btn"
+          >
+            View Technical Specs <ArrowRight size={13} className="group-hover/btn:translate-x-0.5 transition-transform duration-255" />
+          </Link>
+        </div>
       </div>
     </div>
   );
