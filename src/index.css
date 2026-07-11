@@ -65,7 +65,7 @@
 
   /* Section Padding */
   .section-pad {
-    @apply py-20 md:py-24 px-4 md:px-8 lg:px-16 xl:px-24 max-w-7xl mx-auto;
+    @apply py-20 md:py-24 px-6 md:px-8 lg:px-10 max-w-[1440px] mx-auto;
   }
 }
 

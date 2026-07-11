@@ -19,23 +19,25 @@ export default function Navbar() {
   return (
     <>
       {/* ── Top Corporate Bar ── */}
-      <div className="hidden md:flex bg-slate-900 border-b border-slate-800 justify-between px-8 lg:px-16 xl:px-24 py-2.5 text-xs text-slate-300 font-medium">
-        <div className="flex items-center gap-6">
-          <span className="flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-            TAFE KAIZEN Award Winner
-          </span>
-          <span className="text-slate-500">|</span>
-          <span>ISO 9001:2015 Standards</span>
-        </div>
-        <div className="flex items-center gap-6">
-          <a href={siteConfig.emailHref} className="flex items-center gap-2 hover:text-brand-blue-light transition-colors">
-            <Mail size={13} className="text-brand-blue-light" /> {siteConfig.email}
-          </a>
-          <span className="text-slate-500">|</span>
-          <a href={siteConfig.phoneHref} className="flex items-center gap-2 hover:text-brand-blue-light transition-colors">
-            <Phone size={13} className="text-brand-blue-light" /> {siteConfig.phone}
-          </a>
+      <div className="hidden md:flex bg-slate-900 border-b border-slate-800 py-2.5 text-xs text-slate-300 font-medium">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-10 flex justify-between w-full items-center">
+          <div className="flex items-center gap-6">
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              TAFE KAIZEN Award Winner
+            </span>
+            <span className="text-slate-500">|</span>
+            <span>ISO 9001:2015 Standards</span>
+          </div>
+          <div className="flex items-center gap-6">
+            <a href={siteConfig.emailHref} className="flex items-center gap-2 hover:text-brand-blue-light transition-colors">
+              <Mail size={13} className="text-brand-blue-light" /> {siteConfig.email}
+            </a>
+            <span className="text-slate-500">|</span>
+            <a href={siteConfig.phoneHref} className="flex items-center gap-2 hover:text-brand-blue-light transition-colors">
+              <Phone size={13} className="text-brand-blue-light" /> {siteConfig.phone}
+            </a>
+          </div>
         </div>
       </div>
 
@@ -47,7 +49,7 @@ export default function Navbar() {
             : 'bg-white border-b border-slate-100 py-4'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 xl:px-24 flex items-center justify-between">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-10 flex items-center justify-between">
           
           {/* Logo Brand */}
           <Link to="/" onClick={closeMenu} className="flex items-center gap-3">

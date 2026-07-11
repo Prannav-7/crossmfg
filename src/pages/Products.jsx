@@ -26,7 +26,7 @@ export default function Products() {
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none"
           style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 lg:px-16 xl:px-24 text-center">
+        <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-8 lg:px-10 text-center">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-white/10 border border-white/10 text-xs font-heading font-700 uppercase tracking-wider text-brand-blue-light mb-4">
             Product Catalogue
           </span>
@@ -41,7 +41,7 @@ export default function Products() {
 
       {/* Filter Bar Sticky */}
       <div className="bg-white border-b border-slate-200 sticky top-[68px] z-30 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 xl:px-24 py-4 flex flex-wrap justify-center gap-3">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-10 py-4 flex flex-wrap justify-center gap-3">
           {productCategories.map((cat) => {
             const isActive = activeCategory === cat;
             return (

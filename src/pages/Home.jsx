@@ -32,12 +32,12 @@ export default function Home() {
       {/* ════════════════════════════════════════════════════════════
           HERO SECTION (Corporate & Premium)
       ════════════════════════════════════════════════════════════ */}
-      <section className="relative hero-gradient text-white overflow-hidden py-24 md:py-32">
+      <section className="relative hero-gradient text-white overflow-hidden py-14 md:py-18 lg:py-22">
         {/* Subtle grid pattern background */}
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
           style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 lg:px-16 xl:px-24">
+        
+        <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-8 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
             {/* Left Hero Content */}
@@ -143,7 +143,7 @@ export default function Home() {
 
       {/* ── ── STATS BANNER ── ── */}
       <section className="bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 xl:px-24 py-8">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-10 py-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((stat, i) => (
               <ScrollReveal key={stat.label} delay={i * 0.1}>
