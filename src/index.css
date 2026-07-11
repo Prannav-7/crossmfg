@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,19 +7,27 @@
 /* ─── Base Styles ───────────────────────────────────────────────────── */
 @layer base {
   body {
-    @apply bg-light-bg text-text-dark font-body antialiased;
+    @apply bg-[#F8F9FA] text-text-dark font-body antialiased;
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading text-text-dark font-700 tracking-tight;
   }
-  
+
   /* Scrollbar */
   ::-webkit-scrollbar {
     width: 6px;
   }
+
   ::-webkit-scrollbar-track {
     @apply bg-slate-100;
   }
+
   ::-webkit-scrollbar-thumb {
     @apply bg-brand-blue/30 rounded-full hover:bg-brand-blue/60 transition-colors;
   }
@@ -27,40 +35,28 @@
 
 /* ─── Component Styles ──────────────────────────────────────────────── */
 @layer components {
+
   /* Buttons */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5
-           font-heading font-700 text-sm tracking-wide text-white rounded-lg
-           bg-brand-blue hover:bg-slate-900 transition-all duration-300
-           hover:shadow-clean hover:-translate-y-0.5 active:translate-y-0;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 font-heading font-700 text-sm tracking-wide text-white rounded-lg bg-brand-blue hover:bg-slate-900 transition-all duration-300 hover:shadow-clean hover:-translate-y-0.5 active:translate-y-0;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5
-           font-heading font-700 text-sm tracking-wide text-white rounded-lg
-           bg-secondary hover:bg-primary transition-all duration-300
-           hover:shadow-clean hover:-translate-y-0.5 active:translate-y-0;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 font-heading font-700 text-sm tracking-wide text-white rounded-lg bg-secondary hover:bg-primary transition-all duration-300 hover:shadow-clean hover:-translate-y-0.5 active:translate-y-0;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5
-           font-heading font-700 text-sm tracking-wide text-brand-blue rounded-lg
-           border border-brand-blue/30 bg-white hover:bg-brand-blue/5 transition-all duration-300
-           hover:border-brand-blue hover:-translate-y-0.5 active:translate-y-0;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 font-heading font-700 text-sm tracking-wide text-brand-blue rounded-lg border border-brand-blue/30 bg-white hover:bg-brand-blue/5 transition-all duration-300 hover:border-brand-blue hover:-translate-y-0.5 active:translate-y-0;
   }
 
   /* Cards */
   .card-premium {
-    @apply bg-white border border-border-slate rounded-xl p-6 md:p-8
-           transition-all duration-300 shadow-clean hover:shadow-premium
-           hover:-translate-y-1;
+    @apply bg-white border border-slate-200 rounded-xl p-6 md:p-8 transition-all duration-300 hover:border-brand-blue/30 hover:shadow-premium hover:-translate-y-1;
   }
 
   /* Headings & Section Dividers */
   .eyebrow-badge {
-    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-md
-           text-xs font-heading font-700 uppercase tracking-wider
-           text-brand-blue bg-brand-blue/10 border border-brand-blue/15 mb-4;
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-heading font-700 uppercase tracking-wider text-brand-blue bg-brand-blue/5 border border-brand-blue/15 mb-4;
   }
 
   /* Section Padding */
@@ -71,7 +67,7 @@
 
 /* Custom Gradients & Utilities */
 .hero-gradient {
-  background: radial-gradient(circle at top right, #1E3E62 0%, #0B192C 100%);
+  background: radial-gradient(circle at top right, #112239 0%, #060D17 100%);
 }
 
 .text-gradient {
@@ -79,4 +75,17 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Engineering Blueprint & Drafting Paper Grid Patterns */
+.blueprint-grid {
+  background-size: 24px 24px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+.drafting-grid {
+  background-size: 20px 20px;
+  background-image: linear-gradient(to right, rgba(30, 111, 191, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 111, 191, 0.04) 1px, transparent 1px);
 }

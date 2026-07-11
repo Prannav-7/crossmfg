@@ -89,6 +89,8 @@ export default function Navbar() {
           {/* Get a Quote Button */}
           <a
             href={siteConfig.emailHref}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:inline-flex btn-primary text-xs !py-2.5 !px-5"
           >
             <Mail size={14} /> Get a Quote

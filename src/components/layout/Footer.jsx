@@ -35,7 +35,7 @@ export default function Footer() {
                 <Phone size={12} className="text-brand-blue-light" />
                 {siteConfig.phone}
               </a>
-              <a href={siteConfig.emailHref} className="flex items-center gap-2.5 text-xs text-slate-300 hover:text-white transition-colors">
+              <a href={siteConfig.emailHref} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-xs text-slate-300 hover:text-white transition-colors">
                 <Mail size={12} className="text-brand-blue-light" />
                 {siteConfig.email}
               </a>

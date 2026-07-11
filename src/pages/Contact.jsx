@@ -13,7 +13,7 @@ function ContactForm() {
   const onSubmit = (data) => {
     const subject = encodeURIComponent(`OEM Machined Parts Enquiry - ${data.name}`);
     const body = encodeURIComponent(`Name: ${data.name}\nPhone: ${data.phone}\nEmail: ${data.email}\n\nMessage / Blueprint Spec Details:\n${data.message}`);
-    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${siteConfig.email}&su=${subject}&body=${body}`, '_blank');
+    window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${siteConfig.email}&su=${subject}&body=${body}`;
     setSubmitted(true); 
     reset();
     setTimeout(() => setSubmitted(false), 5000);
@@ -123,7 +123,12 @@ export default function Contact() {
                   </div>
                   <span className="text-[10px] font-heading font-800 tracking-wider text-slate-400 block uppercase mb-1">{card.label}</span>
                   {card.href ? (
-                    <a href={card.href} className="font-heading font-850 text-text-dark text-lg hover:text-brand-blue transition-colors block mb-1">
+                    <a 
+                      href={card.href} 
+                      target={card.href.startsWith('http') ? '_blank' : undefined}
+                      rel={card.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      className="font-heading font-850 text-text-dark text-lg hover:text-brand-blue transition-colors block mb-1"
+                    >
                       {card.value}
                     </a>
                   ) : (

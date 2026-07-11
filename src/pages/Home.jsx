@@ -34,8 +34,7 @@ export default function Home() {
       ════════════════════════════════════════════════════════════ */}
       <section className="relative hero-gradient text-white overflow-hidden py-14 md:py-18 lg:py-22">
         {/* Subtle grid pattern background */}
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
-          style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+        <div className="absolute inset-0 blueprint-grid opacity-[0.35] pointer-events-none" />
         
         <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-8 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -114,13 +113,13 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="lg:col-span-5 relative hidden lg:block"
+              className="lg:col-span-5 relative block mt-8 lg:mt-0"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-700 group">
                 <img
                   src="/images/manufacturing_shop.png"
                   alt="CMC Precision Machining Facility"
-                  className="w-full h-[420px] object-cover transition-transform duration-500 group-hover:scale-102"
+                  className="w-full h-[280px] sm:h-[360px] lg:h-[420px] object-cover transition-transform duration-500 group-hover:scale-102"
                 />
                 {/* Clean dark gradient overlay for text readability */}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
