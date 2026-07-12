@@ -5,47 +5,149 @@
 @tailwind utilities;
 
 /* ─── Custom Design Utility Tokens (Native CSS Fallbacks) ─────────── */
-.text-brand-charcoal { color: #1A1C1E; }
-.text-brand-charcoal\/70 { color: rgba(26, 28, 30, 0.7); }
-.text-brand-charcoal\/60 { color: rgba(26, 28, 30, 0.6); }
-.text-brand-charcoal\/50 { color: rgba(26, 28, 30, 0.5); }
-.text-brand-charcoal\/30 { color: rgba(26, 28, 30, 0.3); }
-.text-brand-charcoal\/20 { color: rgba(26, 28, 30, 0.2); }
-.text-brand-charcoal\/25 { color: rgba(26, 28, 30, 0.25); }
+.text-brand-charcoal {
+  color: #1A1C1E;
+}
 
-.bg-brand-charcoal { background-color: #1A1C1E; }
-.border-brand-charcoal { border-color: #1A1C1E; }
-.border-brand-charcoal\/10 { border-color: rgba(26, 28, 30, 0.1); }
-.border-brand-charcoal\/15 { border-color: rgba(26, 28, 30, 0.15); }
-.border-brand-charcoal\/20 { border-color: rgba(26, 28, 30, 0.2); }
+.text-brand-charcoal\/70 {
+  color: rgba(26, 28, 30, 0.7);
+}
 
-.bg-brand-parchment { background-color: #FAF7EE; }
-.bg-brand-parchment-light { background-color: #FCFAF2; }
-.text-brand-parchment { color: #FAF7EE; }
-.text-brand-parchment\/70 { color: rgba(250, 247, 238, 0.7); }
-.text-brand-parchment\/60 { color: rgba(250, 247, 238, 0.6); }
-.text-brand-parchment\/50 { color: rgba(250, 247, 238, 0.5); }
-.text-brand-parchment\/40 { color: rgba(250, 247, 238, 0.4); }
-.text-brand-parchment\/30 { color: rgba(250, 247, 238, 0.3); }
-.text-brand-parchment\/20 { color: rgba(250, 247, 238, 0.2); }
-.border-brand-parchment\/5 { border-color: rgba(250, 247, 238, 0.05); }
-.border-brand-parchment\/10 { border-color: rgba(250, 247, 238, 0.1); }
-.border-brand-parchment\/20 { border-color: rgba(250, 247, 238, 0.2); }
-.border-brand-parchment\/25 { border-color: rgba(250, 247, 238, 0.25); }
+.text-brand-charcoal\/60 {
+  color: rgba(26, 28, 30, 0.6);
+}
 
-.text-brand-brass { color: #C5A880; }
-.bg-brand-brass { background-color: #C5A880; }
-.border-brand-brass { border-color: #C5A880; }
-.border-brand-brass\/20 { border-color: rgba(197, 168, 128, 0.2); }
-.border-brand-brass\/25 { border-color: rgba(197, 168, 128, 0.25); }
-.border-brand-brass\/30 { border-color: rgba(197, 168, 128, 0.3); }
-.border-brand-brass\/40 { border-color: rgba(197, 168, 128, 0.4); }
+.text-brand-charcoal\/50 {
+  color: rgba(26, 28, 30, 0.5);
+}
 
-.bg-brand-blueprint { background-color: #070F24; }
-.border-brand-blueprint-grid { border-color: #121E3B; }
+.text-brand-charcoal\/30 {
+  color: rgba(26, 28, 30, 0.3);
+}
 
-.font-technical { font-family: 'JetBrains Mono', monospace; }
-.font-serif-heading { font-family: 'Cormorant Garamond', 'Playfair Display', serif; }
+.text-brand-charcoal\/20 {
+  color: rgba(26, 28, 30, 0.2);
+}
+
+.text-brand-charcoal\/25 {
+  color: rgba(26, 28, 30, 0.25);
+}
+
+.bg-brand-charcoal {
+  background-color: #1A1C1E;
+}
+
+.border-brand-charcoal {
+  border-color: #1A1C1E;
+}
+
+.border-brand-charcoal\/10 {
+  border-color: rgba(26, 28, 30, 0.1);
+}
+
+.border-brand-charcoal\/15 {
+  border-color: rgba(26, 28, 30, 0.15);
+}
+
+.border-brand-charcoal\/20 {
+  border-color: rgba(26, 28, 30, 0.2);
+}
+
+.bg-brand-parchment {
+  background-color: #FAF7EE;
+}
+
+.bg-brand-parchment-light {
+  background-color: #FCFAF2;
+}
+
+.text-brand-parchment {
+  color: #FAF7EE;
+}
+
+.text-brand-parchment\/70 {
+  color: rgba(250, 247, 238, 0.7);
+}
+
+.text-brand-parchment\/60 {
+  color: rgba(250, 247, 238, 0.6);
+}
+
+.text-brand-parchment\/50 {
+  color: rgba(250, 247, 238, 0.5);
+}
+
+.text-brand-parchment\/40 {
+  color: rgba(250, 247, 238, 0.4);
+}
+
+.text-brand-parchment\/30 {
+  color: rgba(250, 247, 238, 0.3);
+}
+
+.text-brand-parchment\/20 {
+  color: rgba(250, 247, 238, 0.2);
+}
+
+.border-brand-parchment\/5 {
+  border-color: rgba(250, 247, 238, 0.05);
+}
+
+.border-brand-parchment\/10 {
+  border-color: rgba(250, 247, 238, 0.1);
+}
+
+.border-brand-parchment\/20 {
+  border-color: rgba(250, 247, 238, 0.2);
+}
+
+.border-brand-parchment\/25 {
+  border-color: rgba(250, 247, 238, 0.25);
+}
+
+.text-brand-brass {
+  color: #C5A880;
+}
+
+.bg-brand-brass {
+  background-color: #C5A880;
+}
+
+.border-brand-brass {
+  border-color: #C5A880;
+}
+
+.border-brand-brass\/20 {
+  border-color: rgba(197, 168, 128, 0.2);
+}
+
+.border-brand-brass\/25 {
+  border-color: rgba(197, 168, 128, 0.25);
+}
+
+.border-brand-brass\/30 {
+  border-color: rgba(197, 168, 128, 0.3);
+}
+
+.border-brand-brass\/40 {
+  border-color: rgba(197, 168, 128, 0.4);
+}
+
+.bg-brand-blueprint {
+  background-color: #070F24;
+}
+
+.border-brand-blueprint-grid {
+  border-color: #121E3B;
+}
+
+.font-technical {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-serif-heading {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+}
 
 /* ─── Base Styles ───────────────────────────────────────────────────── */
 @layer base {
@@ -56,32 +158,40 @@
     background-color: #FAF7EE;
     /* Drafting paper graphite grid backdrop */
     background-size: 32px 32px;
-    background-image: 
+    background-image:
       linear-gradient(to right, rgba(26, 28, 30, 0.03) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(26, 28, 30, 0.03) 1px, transparent 1px);
     background-attachment: fixed;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Cormorant Garamond', 'Playfair Display', serif;
     color: #1A1C1E;
     @apply font-medium tracking-tight;
   }
-  
+
   /* Scrollbar */
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
   }
+
   ::-webkit-scrollbar-track {
     @apply border-l;
     background-color: #FCFAF2;
     border-color: rgba(26, 28, 30, 0.1);
   }
+
   ::-webkit-scrollbar-thumb {
     background-color: rgba(197, 168, 128, 0.45);
     transition: background-color 0.2s;
   }
+
   ::-webkit-scrollbar-thumb:hover {
     background-color: rgba(197, 168, 128, 1);
   }
@@ -89,17 +199,17 @@
 
 /* ─── Premium Editorial & Industrial Components ────────────────────── */
 @layer components {
-  
+
   /* Premium editorial buttons with brushed gold/brass outline or solid charcoal */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3
-           text-xs tracking-widest uppercase rounded-none transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-xs tracking-widest uppercase rounded-none transition-all duration-300;
     font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
     font-weight: 700;
     color: #FAF7EE;
     background-color: #1A1C1E;
     border: 1px solid #1A1C1E;
   }
+
   .btn-primary:hover {
     background-color: #FAF7EE;
     color: #1A1C1E;
@@ -107,28 +217,28 @@
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3
-           text-xs tracking-widest uppercase rounded-none transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-xs tracking-widest uppercase rounded-none transition-all duration-300;
     font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
     font-weight: 700;
     color: #1A1C1E;
     background-color: transparent;
     border: 1px solid rgba(26, 28, 30, 0.3);
   }
+
   .btn-secondary:hover {
     border-color: #1A1C1E;
     background-color: rgba(26, 28, 30, 0.05);
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3
-           text-xs tracking-widest uppercase rounded-none transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-xs tracking-widest uppercase rounded-none transition-all duration-300;
     font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
     font-weight: 700;
     color: #1A1C1E;
     background-color: transparent;
     border: 1px solid #1A1C1E;
   }
+
   .btn-outline:hover {
     background-color: #1A1C1E;
     color: #FAF7EE;
@@ -136,13 +246,13 @@
 
   /* Fine mechanical outline card */
   .card-premium {
-    @apply bg-[#FCFAF2] rounded-none p-6 md:p-8
-           transition-all duration-300 relative;
+    @apply bg-[#FCFAF2] rounded-none p-6 md:p-8 transition-all duration-300 relative;
     border: 1px solid rgba(26, 28, 30, 0.15);
   }
+
   .card-premium:hover {
     border-color: rgba(26, 28, 30, 0.4);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.03);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
   }
 
   /* Drawing sheet coordinates border frame */
@@ -150,12 +260,14 @@
     @apply relative p-6 md:p-8 m-2 md:m-4;
     border: 1px solid rgba(26, 28, 30, 0.2);
   }
+
   .coordinate-frame::before {
     content: "A   B   C   D   E";
     @apply absolute top-1 left-0 right-0 text-[8px] tracking-[4rem] text-center pointer-events-none;
     font-family: 'JetBrains Mono', monospace;
     color: rgba(26, 28, 30, 0.25);
   }
+
   .coordinate-frame::after {
     content: "1\n2\n3\n4";
     @apply absolute left-1.5 top-0 bottom-0 text-[8px] leading-[8rem] text-center whitespace-pre pointer-events-none;
@@ -165,8 +277,7 @@
 
   /* Drafting specs tag */
   .eyebrow-badge {
-    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-none
-           text-[9px] uppercase tracking-widest bg-transparent border mb-4;
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-none text-[9px] uppercase tracking-widest bg-transparent border mb-4;
     font-family: 'JetBrains Mono', monospace;
     color: rgba(26, 28, 30, 0.7);
     border-color: rgba(26, 28, 30, 0.2);
@@ -183,20 +294,24 @@
   .section-pad {
     @apply py-20 md:py-28 px-6 md:px-8 lg:px-12 max-w-[1440px] mx-auto;
   }
-  
+
   /* Technical outline inputs */
-  input, textarea, select {
-    @apply bg-[#FCFAF2] rounded-none px-4 py-3 
-           text-[#1A1C1E] text-sm font-medium
-           focus:outline-none focus:ring-1 
-           transition-all duration-200;
+  input,
+  textarea,
+  select {
+    @apply bg-[#FCFAF2] rounded-none px-4 py-3 text-[#1A1C1E] text-sm font-medium focus:outline-none focus:ring-1 transition-all duration-200;
     border: 1px solid rgba(26, 28, 30, 0.2);
     --tw-ring-color: rgba(26, 28, 30, 0.1);
   }
-  input:focus, textarea:focus, select:focus {
+
+  input:focus,
+  textarea:focus,
+  select:focus {
     border-color: #1A1C1E;
   }
-  input::placeholder, textarea::placeholder {
+
+  input::placeholder,
+  textarea::placeholder {
     color: rgba(26, 28, 30, 0.3);
   }
 }
@@ -224,7 +339,7 @@
 /* Engineering Blueprint & Drafting Paper Grid Patterns */
 .blueprint-grid {
   background-color: #070f24;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 24px 24px, 24px 24px;
@@ -232,7 +347,7 @@
 
 .drafting-grid {
   background-size: 20px 20px;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(26, 28, 30, 0.035) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(26, 28, 30, 0.035) 1px, transparent 1px);
 }
@@ -264,6 +379,7 @@
     stroke-dashoffset: 0;
   }
 }
+
 .animate-draw {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
@@ -273,14 +389,20 @@
 .animate-spin-slow {
   animation: spin 30s linear infinite;
 }
+
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Editorial crosshairs overlay */
 .crosshairs {
-  background-image: 
+  background-image:
     radial-gradient(circle, rgba(26, 28, 30, 0.3) 1px, transparent 1px);
   background-size: 64px 64px;
 }

@@ -13,7 +13,7 @@ export default function ProductCard({ product }) {
 
   return (
     <div className="group flex flex-col bg-brand-parchment-light border border-brand-charcoal/15 rounded-none overflow-hidden transition-all duration-300 hover:border-brand-brass hover:shadow-[0_12px_40px_rgba(197,168,128,0.08)] relative">
-      
+
       {/* Dynamic line markers (drawings coordinates indicators on hover) */}
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-brand-charcoal/5 group-hover:bg-brand-brass transition-colors" />
       <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-brand-charcoal/5 group-hover:bg-brand-brass transition-colors" />
@@ -24,16 +24,16 @@ export default function ProductCard({ product }) {
       <div className="relative h-52 bg-brand-parchment border-b border-brand-charcoal/10 flex items-center justify-center overflow-hidden">
         {/* Subtle grid pattern background */}
         <div className="absolute inset-0 pointer-events-none"
-             style={{
-               backgroundImage: 'linear-gradient(to right, rgba(26,28,30,0.035) 1px, transparent 1px), linear-gradient(to bottom, rgba(26,28,30,0.035) 1px, transparent 1px)',
-               backgroundSize: '12px 12px'
-             }} />
+          style={{
+            backgroundImage: 'linear-gradient(to right, rgba(26,28,30,0.035) 1px, transparent 1px), linear-gradient(to bottom, rgba(26,28,30,0.035) 1px, transparent 1px)',
+            backgroundSize: '12px 12px'
+          }} />
 
         {product.image ? (
-          <img 
-            src={product.image} 
-            alt={product.name} 
-            className="w-4/5 h-4/5 object-contain transition-transform duration-500 group-hover:scale-105" 
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-4/5 h-4/5 object-contain transition-transform duration-500 group-hover:scale-105"
           />
         ) : (
           <div className="flex flex-col items-center gap-3 text-brand-charcoal/30 group-hover:text-brand-brass transition-colors duration-300">
@@ -50,7 +50,7 @@ export default function ProductCard({ product }) {
         <div className="absolute top-3 left-3 px-2 py-0.5 bg-brand-charcoal text-brand-parchment font-technical text-[7px] tracking-widest uppercase border border-brand-brass">
           {categoryCode}
         </div>
-        
+
         {/* Drawing coordinate labels on edge */}
         <div className="absolute bottom-2 right-3 font-technical text-[7px] text-brand-charcoal/20">
           Z: 1.00
@@ -62,7 +62,7 @@ export default function ProductCard({ product }) {
         <h3 className="font-serif-heading font-bold text-lg text-brand-charcoal mb-2 group-hover:text-brand-brass transition-colors duration-300">
           {product.name}
         </h3>
-        
+
         <p className="text-brand-charcoal/85 font-body text-xs md:text-sm leading-relaxed mb-4 line-clamp-2">
           {product.description}
         </p>
@@ -92,7 +92,7 @@ export default function ProductCard({ product }) {
         {/* Action Link to Detail Page */}
         <div className="pt-4 border-t border-brand-charcoal/10 flex items-center justify-between">
           <span className="text-[7px] font-technical text-brand-charcoal/25">REF // CMC-00{product.id}</span>
-          <Link 
+          <Link
             to={`/products/${product.id}`}
             className="text-[9px] font-technical uppercase tracking-widest text-brand-charcoal hover:text-brand-brass inline-flex items-center gap-1.5 group/btn"
           >

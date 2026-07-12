@@ -42,7 +42,7 @@ export default function StatCounter({ value, suffix = '', label, light = false }
       <span className={`font-technical font-medium text-3xl md:text-4xl tracking-tight transition-colors duration-300 ${
         light 
           ? 'text-white' 
-          : 'bg-gradient-brass bg-clip-text text-transparent font-bold'
+          : 'text-brand-brass-dark font-bold'
       }`}>
         {count.toLocaleString()}{suffix}
       </span>

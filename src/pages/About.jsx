@@ -26,7 +26,7 @@ export default function About() {
         <div className="absolute top-4 left-6 text-[8px] font-technical text-brand-parchment/30">
           SECTION_ABOUT // METADATA_INDEX
         </div>
-        
+
         <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-8 lg:px-12 text-center">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/5 border border-brand-brass/20 text-[9px] font-technical uppercase tracking-widest text-brand-brass mb-4">
             [ Company Overview ]
@@ -42,17 +42,17 @@ export default function About() {
 
       {/* Corporate Story & Core Pillars */}
       <section className="section-pad relative overflow-hidden bg-brand-parchment">
-        
+
         <div className="watercolor-wash-brass top-20 right-20" />
-        
+
         <div className="coordinate-frame bg-brand-parchment-light/70 backdrop-blur-sm relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start p-2 md:p-6">
-            
+
             <ScrollReveal direction="left">
-              <SectionHeading 
-                eyebrow="Our Background" 
+              <SectionHeading
+                eyebrow="Our Background"
                 title="Engineering Quality with Uncompromising Dedication"
-                subtitle="CMC was established to address the growing demand for high-grade machined components in automotive and general engineering sectors." 
+                subtitle="CMC was established to address the growing demand for high-grade machined components in automotive and general engineering sectors."
               />
               <p className="text-brand-charcoal/90 font-body text-sm md:text-base leading-relaxed mb-6">
                 Founded by veteran engineer Mr. T. Krishnamoorthy, Cross Manufacturing Company has transitioned from a localized machining shop into an audited, strategic supplier for major industrial OEMs. Over three decades of domain expertise enables us to execute projects with high dimensional accuracy.
@@ -64,7 +64,7 @@ export default function About() {
 
             <ScrollReveal direction="right">
               <div className="flex flex-col gap-6">
-                
+
                 <div className="p-6 bg-brand-parchment border border-brand-charcoal/10 flex gap-4">
                   <div className="w-10 h-10 border border-brand-charcoal/10 flex items-center justify-center shrink-0 bg-brand-parchment-light">
                     <Target size={18} className="text-brand-brass" />
@@ -131,7 +131,7 @@ export default function About() {
                 return (
                   <ScrollReveal key={item.year} delay={i * 0.05}>
                     <div className={`relative flex flex-col md:flex-row items-start ${isEven ? 'md:flex-row-reverse' : ''} justify-between w-full`}>
-                      
+
                       {/* Timeline dot */}
                       <div className="absolute left-[3px] md:left-1/2 md:-translate-x-[4px] top-1.5 w-2.5 h-2.5 bg-brand-brass border border-brand-charcoal rounded-none" />
 
@@ -147,7 +147,7 @@ export default function About() {
                           {item.event}
                         </p>
                       </div>
-                      
+
                       {/* Empty spacer for desktop layout */}
                       <div className="hidden md:block w-[45%]" />
                     </div>
@@ -161,17 +161,17 @@ export default function About() {
 
       {/* Executive Leadership Message */}
       <section className="section-pad bg-brand-parchment relative overflow-hidden">
-        
+
         <div className="watercolor-wash-gray bottom-10 left-10" />
 
         <div className="max-w-[1440px] mx-auto relative z-10">
           <ScrollReveal>
             <SectionHeading eyebrow="Leadership" title="Founder's Message" center />
           </ScrollReveal>
-          
+
           <ScrollReveal delay={0.1}>
             <div className="max-w-3xl mx-auto bg-brand-parchment-light border border-brand-charcoal/15 p-8 md:p-12 relative flex flex-col md:flex-row gap-8 items-center">
-              
+
               {/* Corner markings */}
               <span className="absolute top-[-2px] left-[-2px] text-[8px] font-technical text-brand-charcoal/30 select-none pointer-events-none">+</span>
               <span className="absolute bottom-[-2px] right-[-2px] text-[8px] font-technical text-brand-charcoal/30 select-none pointer-events-none">+</span>
@@ -179,11 +179,11 @@ export default function About() {
               <div className="w-24 h-24 border border-brand-brass/40 flex items-center justify-center shrink-0 font-serif-heading text-3xl font-bold bg-brand-parchment text-brand-charcoal">
                 TK
               </div>
-              
+
               <div>
                 <h3 className="font-serif-heading font-bold text-2xl text-brand-charcoal mb-1">Mr. T. Krishnamoorthy</h3>
                 <p className="text-[10px] font-technical uppercase tracking-widest text-brand-brass mb-4">Founder & Managing Director</p>
-                
+
                 <p className="text-brand-charcoal/90 font-body italic text-sm md:text-base leading-relaxed mb-4">
                   "Over 35 years in manufacturing has taught us that precision is not merely a measurement, but a commitment. Our partnerships with automotive and agricultural tractor OEMs reflect our dedication to zero-defect quality and long-term operating reliability. We thank our customers for their continued trust in CMC."
                 </p>

@@ -37,10 +37,10 @@ export default function Home() {
           HERO SECTION (Editorial Premium Industrial Luxury)
       ════════════════════════════════════════════════════════════ */}
       <section className="relative bg-brand-charcoal text-white overflow-hidden py-20 lg:py-28 border-b border-brand-charcoal/30">
-        
+
         {/* Deep blue blueprint grid background */}
         <div className="absolute inset-0 blueprint-grid opacity-[0.25] pointer-events-none" />
-        
+
         {/* Corner coordinates markings */}
         <div className="absolute top-4 left-6 text-[8px] font-technical text-brand-parchment/30">
           SHEET_01_OF_10 // GRID_COORD_REF: CMC-Z01
@@ -139,11 +139,10 @@ export default function Home() {
                   <button
                     key={tab.id}
                     onClick={() => setHeroBlueprintId(tab.id)}
-                    className={`px-3 py-1.5 border transition-all shrink-0 ${
-                      heroBlueprintId === tab.id
+                    className={`px-3 py-1.5 border transition-all shrink-0 ${heroBlueprintId === tab.id
                         ? 'border-brand-brass text-brand-brass bg-white/5'
                         : 'border-white/10 text-brand-parchment/50 hover:border-white/20'
-                    }`}
+                      }`}
                   >
                     {tab.name}
                   </button>
@@ -152,29 +151,29 @@ export default function Home() {
 
               {/* High-Fidelity Engineering Sketch frame */}
               <div className="border border-brand-brass/20 bg-brand-blueprint flex flex-col p-4 relative overflow-hidden transition-all duration-300">
-                
+
                 {/* Coordinates */}
                 <div className="absolute top-1 left-4 right-4 flex justify-between pointer-events-none text-[7px] font-technical text-brand-brass opacity-40 select-none">
                   <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span>
                 </div>
-                
+
                 {/* Blueprint grid lines */}
                 <div className="absolute inset-0 pointer-events-none opacity-[0.12]"
-                     style={{
-                       backgroundImage: 'linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)',
-                       backgroundSize: '16px 16px'
-                     }} />
+                  style={{
+                    backgroundImage: 'linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)',
+                    backgroundSize: '16px 16px'
+                  }} />
 
                 {/* Drawing Image Area */}
                 <div className="relative aspect-square max-w-[420px] mx-auto w-full flex items-center justify-center border border-white/5 bg-[#FCFAF2] p-6">
-                  <img 
+                  <img
                     src={
                       heroBlueprintId === 1 ? '/images/differential_cross.png' :
-                      heroBlueprintId === 2 ? '/images/hydraulic_piston.png' :
-                      heroBlueprintId === 3 ? '/images/hydraulic_camshaft.png' :
-                      '/images/centre_column.png'
+                        heroBlueprintId === 2 ? '/images/hydraulic_piston.png' :
+                          heroBlueprintId === 3 ? '/images/hydraulic_camshaft.png' :
+                            '/images/centre_column.png'
                     }
-                    alt="CMC Mechanical Sketch" 
+                    alt="CMC Mechanical Sketch"
                     className="w-full h-full object-contain transition-transform duration-500 hover:scale-103"
                   />
                   <div className="absolute top-3 left-3 px-2 py-0.5 bg-brand-charcoal text-brand-parchment font-technical text-[7px] tracking-widest uppercase border border-brand-brass">
@@ -219,8 +218,8 @@ export default function Home() {
       </section>
 
       {/* ── ── CORPORATE PROFILE SECTION ── ── */}
-      <section className="relative section-pad overflow-hidden">
-        
+      <section className="relative pt-6 md:pt-10 pb-20 md:pb-28 px-6 md:px-8 lg:px-12 max-w-[1440px] mx-auto overflow-hidden">
+
         {/* Watercolor texture blobs behind section */}
         <div className="watercolor-wash-brass top-20 right-10" />
         <div className="watercolor-wash-gray bottom-10 left-10" />
@@ -232,8 +231,7 @@ export default function Home() {
               <SectionHeading
                 eyebrow="Corporate Profile"
                 title="Over 35 Years of Swiss-Grade Mechanical Craftsmanship"
-                subtitle="Established in 1989, Cross Manufacturing Company represents a cornerstone of automotive and general engineering component supply in Chennai."
-              />
+                subtitle="Established in 1989, Cross Manufacturing Company represents a cornerstone of automotive and general engineering component supply in Chennai."/>
               <p className="text-brand-charcoal/90 font-body leading-relaxed text-sm md:text-base mb-6">
                 Founded by veteran mechanical engineer **Mr. T. Krishnamoorthy**, CMC has maintained a sterling track record of precision, reliability, and engineering superiority. We produce critical components that drive tractors, control hydraulic setups, and power industrial valve systems.
               </p>
@@ -248,10 +246,10 @@ export default function Home() {
             <ScrollReveal direction="right">
               {/* Technical drawing datasheet layout */}
               <div className="border border-brand-charcoal/15 bg-brand-parchment p-6 md:p-8 relative">
-                
+
                 {/* Crosshairs overlay */}
                 <div className="absolute inset-0 crosshairs opacity-[0.25] pointer-events-none" />
-                
+
                 <h3 className="font-technical text-[10px] uppercase tracking-widest text-brand-charcoal/90 mb-6 pb-2 border-b border-brand-charcoal/10 flex items-center justify-between">
                   <span>METRIC SPECIFICATION SHEET</span>
                   <span className="text-brand-brass">ISO 9001:2015</span>
@@ -289,7 +287,7 @@ export default function Home() {
         <div className="absolute top-2 left-6 text-[8px] font-technical text-brand-charcoal/20 uppercase">
           INDEX REFERENCE // CMC-PORTFOLIO-R0
         </div>
-        
+
         <ScrollReveal>
           <SectionHeading
             eyebrow="Precision Parts Portfolio"
@@ -316,7 +314,7 @@ export default function Home() {
 
       {/* ── ── WHY PARTNER WITH US ── ── */}
       <section className="section-pad relative overflow-hidden">
-        
+
         <div className="watercolor-wash-brass bottom-10 right-10" />
 
         <ScrollReveal>
@@ -332,7 +330,7 @@ export default function Home() {
           {whyChooseUs.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 0.08}>
               <div className="bg-brand-parchment-light border border-brand-charcoal/10 p-6 transition-all duration-300 hover:border-brand-brass hover:shadow-premium relative">
-                
+
                 {/* Thin top highlighted bar */}
                 <div className="absolute top-0 left-0 right-0 h-[2px] bg-transparent group-hover:bg-brand-brass transition-colors" />
 

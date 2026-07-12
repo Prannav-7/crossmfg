@@ -50,11 +50,10 @@ export default function Products() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 border transition-all duration-300 uppercase tracking-widest ${
-                  isActive
+                className={`px-4 py-2 border transition-all duration-300 uppercase tracking-widest ${isActive
                     ? 'bg-brand-charcoal border-brand-charcoal text-white font-bold'
                     : 'bg-brand-parchment-light border-brand-charcoal/15 text-brand-charcoal/70 hover:border-brand-charcoal'
-                }`}
+                  }`}
               >
                 [ {cat} ]
               </button>
@@ -65,11 +64,11 @@ export default function Products() {
 
       {/* Products Grid */}
       <section className="section-pad bg-brand-parchment relative overflow-hidden">
-        
+
         {/* Coordinating frame borders */}
         <div className="coordinate-frame bg-brand-parchment-light/30 backdrop-blur-sm">
           <div className="p-2 md:p-6 relative z-10">
-            
+
             {/* Header info bar */}
             <div className="mb-8 flex items-center justify-between pb-4 border-b border-brand-charcoal/10">
               <div className="flex items-center gap-2 font-technical text-[9px] text-brand-charcoal/50 uppercase tracking-widest">

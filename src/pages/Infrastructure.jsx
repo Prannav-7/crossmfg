@@ -35,7 +35,7 @@ export default function Infrastructure() {
 
       {/* Manufacturing Facilities Cards */}
       <section className="section-pad bg-brand-parchment relative overflow-hidden">
-        
+
         <div className="watercolor-wash-brass top-20 right-20" />
 
         <div className="max-w-[1440px] mx-auto relative z-10">
@@ -108,7 +108,7 @@ export default function Infrastructure() {
 
       {/* Machinery Assets Table/Grid */}
       <section className="section-pad bg-brand-parchment-light border-y border-brand-charcoal/15 relative overflow-hidden">
-        
+
         <div className="watercolor-wash-gray bottom-10 left-10" />
 
         <div className="max-w-[1440px] mx-auto relative z-10">
@@ -125,7 +125,7 @@ export default function Infrastructure() {
             {machinery.map((mach, i) => (
               <ScrollReveal key={mach.name} delay={i * 0.05}>
                 <div className="bg-brand-parchment border border-brand-charcoal/15 p-6 text-center hover:border-brand-brass hover:shadow-premium transition-all duration-300 relative">
-                  
+
                   {/* Plus crosshairs ticks */}
                   <span className="absolute top-1 left-1.5 font-technical text-[6px] text-brand-charcoal/20">+</span>
                   <span className="absolute bottom-1 right-1.5 font-technical text-[6px] text-brand-charcoal/20">+</span>
@@ -133,7 +133,7 @@ export default function Infrastructure() {
                   <div className="w-8 h-8 border border-brand-charcoal/10 flex items-center justify-center mx-auto mb-4 bg-brand-parchment-light text-brand-brass">
                     <Cog size={14} className="animate-spin-slow" />
                   </div>
-                  
+
                   <span className="font-technical font-medium text-2xl text-brand-charcoal block mb-1">
                     {mach.count}
                   </span>
@@ -151,7 +151,7 @@ export default function Infrastructure() {
       <section className="section-pad bg-brand-parchment relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            
+
             <ScrollReveal direction="left">
               <span className="eyebrow-badge">High Volume Audited</span>
               <h3 className="font-serif-heading font-bold text-3xl leading-tight text-brand-charcoal mb-4">
@@ -169,7 +169,7 @@ export default function Infrastructure() {
             <ScrollReveal direction="right">
               {/* Title block style */}
               <div className="p-6 bg-brand-parchment-light border border-brand-charcoal/15 space-y-4 relative">
-                
+
                 {/* Crosshairs */}
                 <div className="absolute inset-0 crosshairs opacity-[0.2] pointer-events-none" />
 
@@ -177,12 +177,12 @@ export default function Infrastructure() {
                   <span className="text-brand-charcoal/60 uppercase">Operational Shifts</span>
                   <span className="font-bold text-brand-charcoal">DOUBLE SHIFT PEAK CAP</span>
                 </div>
-                
+
                 <div className="flex justify-between items-center pb-3 border-b border-brand-charcoal/10 font-technical text-xs relative z-10">
                   <span className="text-brand-charcoal/60 uppercase">Product Types Supported</span>
                   <span className="font-bold text-brand-charcoal">OVER 500 VARIANTS</span>
                 </div>
-                
+
                 <div className="flex justify-between items-center font-technical text-xs relative z-10">
                   <span className="text-brand-charcoal/60 uppercase">Facility Footprint</span>
                   <span className="font-bold text-brand-charcoal">SIDCO INDUSTRIAL STANDARD</span>
