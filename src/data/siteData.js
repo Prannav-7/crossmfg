@@ -72,7 +72,7 @@ export const products = [
     category: 'Hydraulic',
     description: 'Precision camshaft featuring dual-ground lobe profiles designed for exact hydraulic piston stroke timing. Ground using advanced profile grinders to match custom lift and acceleration geometries. High fatigue resistance prevents lobe degradation under heavy continuous cyclic pressure loading. Individually inspected on CNC metrology coordinate measuring stations.',
     specs: ['Material: EN 353 Alloy Steel (Carburizing Grade)', 'Lobe Profile Accuracy: Within 3 microns profile error', 'Heat Treatment: Gas Carburizing + Case Hardening (Depth 1.0mm)', 'Key Processes: CNC Turning + Profile Lobe Grinding + Magnetic Particle Inspection', 'Application: Hydraulic Valve Actuation & High-Pressure Injection Pumps'],
-    image: '/images/hydraulic_piston.png',
+    image: '/images/hydraulic_camshaft.png',
   },
   {
     id: 4,
@@ -96,7 +96,7 @@ export const products = [
     category: 'Tractor',
     description: 'High-volume internal and external keyways, splines, and double-D slot components for industrial machinery and agricultural implements. Manufactured on vertical broaching machinery using custom-made broach toolings to maintain tooth index spacing. Offers high repeatability and rapid batch turnaround rates for OEM assembly lines.',
     specs: ['Material Range: Mild Steel, Alloy Steel, Stainless Steel (304/316)', 'Profile Precision: Class 7 spline fits', 'Max Broach Length: 1200 mm stroke capability', 'Key Processes: CNC Turning prep + Vertical Broaching + Deburring', 'Application: Gearbox Sleeves, PTO Shaft Adapters, Agricultural Drives'],
-    image: '/images/differential_cross.png',
+    image: '/images/broaching_parts.png',
   },
   {
     id: 7,
@@ -112,7 +112,7 @@ export const products = [
     category: 'CNC',
     description: 'Precision cylindrical shafts engineered to transmit torque or support rotating parts in conveyors, pumps, and motors. Produced on multi-axis turn-mill machinery and finished on centerless/cylindrical grinding wheels. Features precise bearing-journal surfaces and strict straightness control to prevent radial runout during high-rpm operations.',
     specs: ['Material: EN 8D / EN 9 Bright Steel Shafting', 'Straightness Tolerance: 0.1 mm per meter length', 'Diameter Range: 10 mm to 150 mm outer diameter', 'Surface Finish: Ra 0.3 microns max (Superfinished journals)', 'Application: Electric Motor Shafts, Hydraulic cylinder rods, Pump Impeller Rotors'],
-    image: '/images/cnc_components.png',
+    image: '/images/ground_shafts.png',
   },
 ];
 

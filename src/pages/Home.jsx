@@ -1,8 +1,9 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   ArrowRight, Phone, Mail, Award, Shield,
-  Zap, Users, Factory, CheckCircle, Target, ArrowUpRight,
+  Zap, Users, Factory, Target, ArrowUpRight, ChevronRight, PenTool, Layout
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
@@ -11,128 +12,192 @@ import StatCounter from '../components/ui/StatCounter';
 import ProductCard from '../components/ui/ProductCard';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import SectionHeading from '../components/ui/SectionHeading';
+import TechnicalBlueprint from '../components/ui/TechnicalBlueprint';
 
 const iconMap = {
-  precision: <Zap size={22} className="text-brand-blue" />,
-  oem: <Users size={22} className="text-brand-blue" />,
-  kaizen: <Award size={22} className="text-brand-blue" />,
-  quality: <Shield size={22} className="text-brand-blue" />,
-  capacity: <Factory size={22} className="text-brand-blue" />,
-  expertise: <Target size={22} className="text-brand-blue" />,
+  precision: <Zap size={18} className="text-brand-brass" />,
+  oem: <Users size={18} className="text-brand-brass" />,
+  kaizen: <Award size={18} className="text-brand-brass" />,
+  quality: <Shield size={18} className="text-brand-brass" />,
+  capacity: <Factory size={18} className="text-brand-brass" />,
+  expertise: <Target size={18} className="text-brand-brass" />,
 };
 
 export default function Home() {
+  const [heroBlueprintId, setHeroBlueprintId] = useState(1);
+
   return (
     <>
       <Helmet>
-        <title>Cross Manufacturing Company — Precision OEM Drivetrain & Hydraulic Components</title>
-        <meta name="description" content="CMC Chennai: Elite manufacturer of tractor components, hydraulic systems & valve actuators. Established 1989. TAFE Best KAIZEN Award Winner." />
+        <title>Cross Manufacturing Company — Precision B2B OEM Machined Components</title>
+        <meta name="description" content="CMC Chennai: Elite manufacturer of tractor differential crosses, hydraulic systems & valve actuators. Established 1989. TAFE Best KAIZEN Award Winner." />
       </Helmet>
 
       {/* ════════════════════════════════════════════════════════════
-          HERO SECTION (Corporate & Premium)
+          HERO SECTION (Editorial Premium Industrial Luxury)
       ════════════════════════════════════════════════════════════ */}
-      <section className="relative hero-gradient text-white overflow-hidden py-14 md:py-18 lg:py-22">
-        {/* Subtle grid pattern background */}
-        <div className="absolute inset-0 blueprint-grid opacity-[0.35] pointer-events-none" />
+      <section className="relative bg-brand-charcoal text-white overflow-hidden py-20 lg:py-28 border-b border-brand-charcoal/30">
         
-        <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-8 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        {/* Deep blue blueprint grid background */}
+        <div className="absolute inset-0 blueprint-grid opacity-[0.25] pointer-events-none" />
+        
+        {/* Corner coordinates markings */}
+        <div className="absolute top-4 left-6 text-[8px] font-technical text-brand-parchment/30">
+          SHEET_01_OF_10 // GRID_COORD_REF: CMC-Z01
+        </div>
+        <div className="absolute bottom-4 left-6 text-[8px] font-technical text-brand-parchment/30">
+          CROSS MFG CO. © 1989
+        </div>
+
+        <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-8 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
             {/* Left Hero Content */}
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-6 space-y-6">
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 px-3 py-1 rounded bg-white/10 border border-white/15 text-xs font-heading font-700 uppercase tracking-wider text-brand-blue-light mb-6"
+                className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-brand-brass/25 text-[9px] font-technical uppercase tracking-widest text-brand-brass"
               >
-                <span className="w-1.5 h-1.5 bg-brand-blue-light rounded-full animate-pulse" />
-                Engineering Trust Since 1989
+                <span className="w-1.5 h-1.5 bg-brand-brass rounded-full animate-pulse" />
+                FOUNDED 1989 // CHENNAI INDUSTRIAL UNIT
               </motion.div>
 
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="font-heading font-800 text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.1] tracking-tight text-white mb-6"
+                className="font-serif-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.08] text-white tracking-wide font-light"
               >
-                Precision Machined <br />
-                <span className="text-brand-blue-light">OEM Components</span>
+                Precision Driven <br />
+                <span className="text-gradient-brass font-medium">B2B Manufacturing</span>
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-slate-300 text-base md:text-lg leading-relaxed mb-8 max-w-xl"
+                className="text-brand-parchment/60 font-serif-heading italic text-base md:text-lg leading-relaxed max-w-xl font-light"
               >
-                Cross Manufacturing Company is a premier manufacturer of high-tolerance tractor components, hydraulic pump parts, and valve actuators. Partnered with India's top industrial OEMs.
+                An audited, strategic OEM supplier of high-tolerance tractor drivetrain cross journals, high-pressure hydraulic pistons, and chemical valve actuator columns.
               </motion.p>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex flex-col sm:flex-row gap-4"
+                className="flex flex-col sm:flex-row gap-4 pt-4"
               >
-                <Link to="/products" className="btn-primary">
-                  Explore Components <ArrowRight size={16} />
+                <Link to="/products" className="btn-primary !border-brand-brass/40 hover:!border-brand-brass hover:!text-white bg-brand-charcoal text-white hover:bg-brand-charcoal/80">
+                  EXPLORE BLUEPRINTS <ArrowRight size={14} className="text-brand-brass" />
                 </Link>
-                <Link to="/contact" className="btn-outline !bg-transparent !text-white hover:!bg-white/10 !border-white/20">
-                  Contact Technical Sales
+                <Link to="/contact" className="btn-secondary !text-brand-parchment !border-brand-parchment/25 hover:!border-brand-parchment">
+                  REQUEST CYCLE ESTIMATES
                 </Link>
               </motion.div>
 
-              {/* Bottom trust badges */}
+              {/* Bottom technical parameters */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
-                className="mt-12 pt-8 border-t border-white/10 flex flex-wrap gap-8 items-center"
+                className="mt-12 pt-8 border-t border-brand-parchment/10 flex flex-wrap gap-8 items-center text-[10px] font-technical"
               >
-                <div className="flex flex-col">
-                  <span className="text-2xl font-stat font-700 text-brand-blue-light">TAFE Award</span>
-                  <span className="text-xs text-slate-400 font-heading font-600 uppercase tracking-wider">Best KAIZEN 2016</span>
+                <div>
+                  <span className="block text-brand-brass text-lg font-medium leading-none mb-1">99.8%</span>
+                  <span className="text-brand-parchment/40 uppercase tracking-widest">Quality Pass Rate</span>
                 </div>
-                <div className="w-px h-8 bg-white/10" />
-                <div className="flex flex-col">
-                  <span className="text-2xl font-stat font-700 text-brand-blue-light">2 Facilities</span>
-                  <span className="text-xs text-slate-400 font-heading font-600 uppercase tracking-wider">Chennai SIDCO & Senneerkuppam</span>
+                <div className="w-px h-8 bg-brand-parchment/10" />
+                <div>
+                  <span className="block text-brand-brass text-lg font-medium leading-none mb-1">5+ MICRONS</span>
+                  <span className="text-brand-parchment/40 uppercase tracking-widest">Tolerances Standard</span>
                 </div>
-                <div className="w-px h-8 bg-white/10" />
-                <div className="flex flex-col">
-                  <span className="text-2xl font-stat font-700 text-brand-blue-light">ISO Standards</span>
-                  <span className="text-xs text-slate-400 font-heading font-600 uppercase tracking-wider">Certified Drivetrain Supply</span>
+                <div className="w-px h-8 bg-brand-parchment/10" />
+                <div>
+                  <span className="block text-brand-brass text-lg font-medium leading-none mb-1">2 UNITS</span>
+                  <span className="text-brand-parchment/40 uppercase tracking-widest">Chennai SIDCO Zones</span>
                 </div>
               </motion.div>
             </div>
 
-            {/* Right Hero Visual Showcase (Real Manufacturing Shop Floor Image) */}
+            {/* Right Hero Visual Showcase (Interactive Blueprint panel) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="lg:col-span-5 relative block mt-8 lg:mt-0"
+              className="lg:col-span-6 relative block"
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-700 group">
-                <img
-                  src="/images/manufacturing_shop.png"
-                  alt="CMC Precision Machining Facility"
-                  className="w-full h-[280px] sm:h-[360px] lg:h-[420px] object-cover transition-transform duration-500 group-hover:scale-102"
-                />
-                {/* Clean dark gradient overlay for text readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
+              {/* Product draft tabs */}
+              <div className="flex gap-1.5 mb-2 font-technical text-[8px] uppercase tracking-wider overflow-x-auto pb-2 scrollbar-none">
+                {[
+                  { id: 1, name: "Differential Cross" },
+                  { id: 2, name: "Hydraulic Piston" },
+                  { id: 3, name: "Pump Camshaft" },
+                  { id: 4, name: "Actuator Column" }
+                ].map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setHeroBlueprintId(tab.id)}
+                    className={`px-3 py-1.5 border transition-all shrink-0 ${
+                      heroBlueprintId === tab.id
+                        ? 'border-brand-brass text-brand-brass bg-white/5'
+                        : 'border-white/10 text-brand-parchment/50 hover:border-white/20'
+                    }`}
+                  >
+                    {tab.name}
+                  </button>
+                ))}
+              </div>
 
-                {/* Floating Info Overlay */}
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="text-[10px] font-heading font-800 tracking-wider text-slate-300 uppercase">Factory Status: Online</span>
-                  </div>
-                  <h3 className="font-heading font-800 text-lg text-white mb-1">Chennai Unit I CNC Operations</h3>
-                  <p className="text-slate-300 text-xs leading-relaxed">Advanced multi-axis turning, grinding and metrology centers serving leading tractor OEMs.</p>
+              {/* High-Fidelity Engineering Sketch frame */}
+              <div className="border border-brand-brass/20 bg-brand-blueprint flex flex-col p-4 relative overflow-hidden transition-all duration-300">
+                
+                {/* Coordinates */}
+                <div className="absolute top-1 left-4 right-4 flex justify-between pointer-events-none text-[7px] font-technical text-brand-brass opacity-40 select-none">
+                  <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span>
                 </div>
+                
+                {/* Blueprint grid lines */}
+                <div className="absolute inset-0 pointer-events-none opacity-[0.12]"
+                     style={{
+                       backgroundImage: 'linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)',
+                       backgroundSize: '16px 16px'
+                     }} />
+
+                {/* Drawing Image Area */}
+                <div className="relative aspect-square max-w-[420px] mx-auto w-full flex items-center justify-center border border-white/5 bg-[#FCFAF2] p-6">
+                  <img 
+                    src={
+                      heroBlueprintId === 1 ? '/images/differential_cross.png' :
+                      heroBlueprintId === 2 ? '/images/hydraulic_piston.png' :
+                      heroBlueprintId === 3 ? '/images/hydraulic_camshaft.png' :
+                      '/images/centre_column.png'
+                    }
+                    alt="CMC Mechanical Sketch" 
+                    className="w-full h-full object-contain transition-transform duration-500 hover:scale-103"
+                  />
+                  <div className="absolute top-3 left-3 px-2 py-0.5 bg-brand-charcoal text-brand-parchment font-technical text-[7px] tracking-widest uppercase border border-brand-brass">
+                    REF DWG // CMC-00{heroBlueprintId}
+                  </div>
+                </div>
+
+                {/* Engineering Title Block */}
+                <div className="mt-4 pt-3 border-t border-brand-blueprint-grid grid grid-cols-2 md:grid-cols-4 gap-2 text-[8px] font-technical uppercase text-slate-400">
+                  <div className="border-r border-brand-blueprint-grid pr-2">
+                    <span>DRWN BY:</span> <span className="block font-bold text-white">T.K. (FOUNDER)</span>
+                  </div>
+                  <div className="border-r border-brand-blueprint-grid pr-2">
+                    <span>CHKD BY:</span> <span className="block font-bold text-white">QA METROLOGY</span>
+                  </div>
+                  <div className="border-r border-brand-blueprint-grid pr-2">
+                    <span>TOLERANCE:</span> <span className="block font-bold text-white">ISO 2768-F</span>
+                  </div>
+                  <div>
+                    <span>SCALE:</span> <span className="block font-bold text-white">1:1</span>
+                  </div>
+                </div>
+
               </div>
             </motion.div>
 
@@ -140,77 +205,95 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── ── STATS BANNER ── ── */}
-      <section className="bg-white border-b border-slate-200">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-10 py-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* ── ── STATS DATASHEET BANNER ── ── */}
+      <section className="bg-brand-parchment border-b border-brand-charcoal/10 relative z-10">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-12 py-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {stats.map((stat, i) => (
-              <ScrollReveal key={stat.label} delay={i * 0.1}>
-                <div className="border-r border-slate-100 last:border-r-0 max-lg:border-r-0">
-                  <StatCounter value={stat.value} suffix={stat.suffix} label={stat.label} />
-                </div>
+              <ScrollReveal key={stat.label} delay={i * 0.08}>
+                <StatCounter value={stat.value} suffix={stat.suffix} label={stat.label} />
               </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── ── ABOUT SECTION ── ── */}
-      <section className="section-pad bg-light-bg">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* ── ── CORPORATE PROFILE SECTION ── ── */}
+      <section className="relative section-pad overflow-hidden">
+        
+        {/* Watercolor texture blobs behind section */}
+        <div className="watercolor-wash-brass top-20 right-10" />
+        <div className="watercolor-wash-gray bottom-10 left-10" />
 
-          <ScrollReveal direction="left">
-            <SectionHeading
-              eyebrow="Corporate Profile"
-              title="Over 35 Years of Manufacturing Leadership"
-              subtitle="Established in 1989, Cross Manufacturing Company represents a cornerstone of automotive and general engineering component supply in Chennai."
-            />
-            <p className="text-text-muted text-base leading-relaxed mb-6">
-              Founded by veteran mechanical engineer Mr. T. Krishnamoorthy, CMC has maintained a sterling track record of precision, reliability, and engineering superiority. We produce critical components that drive tractors, control hydraulic setups, and power industrial valve systems.
-            </p>
-            <p className="text-text-muted text-base leading-relaxed mb-8">
-              Operating from Unit I in Poonamallee and Unit II in Thirumazhisai SIDCO, we house top-tier CNC machining centers, automated grinding equipment, and a fully equipped CMM laboratory to certify quality standards.
-            </p>
-            <Link to="/about" className="btn-primary">
-              Learn More About Us <ArrowRight size={16} />
-            </Link>
-          </ScrollReveal>
+        <div className="coordinate-frame bg-brand-parchment-light/80 backdrop-blur-sm">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10 p-2 md:p-6">
 
-          <ScrollReveal direction="right">
-            <div className="bg-white border border-border-slate rounded-2xl p-8 shadow-clean">
-              <h3 className="font-heading font-700 text-xl text-text-dark mb-6 pb-4 border-b border-border-slate uppercase tracking-wide">
-                OEM Delivery Metrics
-              </h3>
+            <ScrollReveal direction="left">
+              <SectionHeading
+                eyebrow="Corporate Profile"
+                title="Over 35 Years of Swiss-Grade Mechanical Craftsmanship"
+                subtitle="Established in 1989, Cross Manufacturing Company represents a cornerstone of automotive and general engineering component supply in Chennai."
+              />
+              <p className="text-brand-charcoal/70 font-serif-heading font-light leading-relaxed text-sm md:text-base mb-6">
+                Founded by veteran mechanical engineer **Mr. T. Krishnamoorthy**, CMC has maintained a sterling track record of precision, reliability, and engineering superiority. We produce critical components that drive tractors, control hydraulic setups, and power industrial valve systems.
+              </p>
+              <p className="text-brand-charcoal/70 font-serif-heading font-light leading-relaxed text-sm md:text-base mb-8">
+                Operating from Unit I in Poonamallee and Unit II in Thirumazhisai SIDCO, we house top-tier CNC machining centers, automated grinding equipment, and a fully equipped CMM laboratory to certify quality standards.
+              </p>
+              <Link to="/about" className="btn-primary">
+                LEARN MORE ABOUT US <ArrowRight size={14} className="text-brand-brass" />
+              </Link>
+            </ScrollReveal>
 
-              <div className="space-y-6">
-                {[
-                  { label: 'Quality Acceptance Rate', value: '99.8%' },
-                  { label: 'OEM Partnership Tenure', value: '35+ Years' },
-                  { label: 'Components Produced', value: '500+ Variants' },
-                  { label: 'Awarded Certifications', value: 'TAFE KAIZEN 2016' }
-                ].map((metric) => (
-                  <div key={metric.label} className="flex justify-between items-center">
-                    <span className="text-text-muted text-sm font-medium">{metric.label}</span>
-                    <span className="font-heading font-800 text-brand-blue text-base">{metric.value}</span>
-                  </div>
-                ))}
+            <ScrollReveal direction="right">
+              {/* Technical drawing datasheet layout */}
+              <div className="border border-brand-charcoal/15 bg-brand-parchment p-6 md:p-8 relative">
+                
+                {/* Crosshairs overlay */}
+                <div className="absolute inset-0 crosshairs opacity-[0.25] pointer-events-none" />
+                
+                <h3 className="font-technical text-[10px] uppercase tracking-widest text-brand-charcoal/90 mb-6 pb-2 border-b border-brand-charcoal/10 flex items-center justify-between">
+                  <span>METRIC SPECIFICATION SHEET</span>
+                  <span className="text-brand-brass">ISO 9001:2015</span>
+                </h3>
+
+                <div className="space-y-5 font-technical text-xs relative z-10">
+                  {[
+                    { label: 'Quality Acceptance Rate', value: '99.8%', unit: 'AVG' },
+                    { label: 'OEM Partnership Tenure', value: '35+', unit: 'YEARS' },
+                    { label: 'Components Produced', value: '500+', unit: 'VARIANTS' },
+                    { label: 'Audit Standard Cert', value: 'TAFE KAIZEN', unit: '2016' }
+                  ].map((metric) => (
+                    <div key={metric.label} className="flex justify-between items-center py-2 border-b border-dashed border-brand-charcoal/10">
+                      <span className="text-brand-charcoal/60">{metric.label}</span>
+                      <div className="flex items-center gap-1.5 font-bold">
+                        <span className="text-brand-charcoal">{metric.value}</span>
+                        <span className="text-brand-brass text-[9px] opacity-75">{metric.unit}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-8 p-4 bg-brand-parchment-light border border-brand-charcoal/10 text-[9px] font-technical text-brand-charcoal/60 leading-relaxed uppercase">
+                  <strong>Registered Locations:</strong> Poonamallee (Chennai Unit I) & Thirumazhisai SIDCO Industrial Zone (Chennai Unit II).
+                </div>
               </div>
+            </ScrollReveal>
 
-              <div className="mt-8 p-4 bg-slate-50 border border-border-slate rounded-lg text-xs text-text-muted leading-relaxed">
-                <strong>Unit Locations:</strong> Senneerkuppam (Poonamallee) & SIDCO Industrial Estate (Thirumazhisai), Chennai, Tamil Nadu, India.
-              </div>
-            </div>
-          </ScrollReveal>
-
+          </div>
         </div>
       </section>
 
       {/* ── ── FEATURED PRODUCTS ── ── */}
-      <section className="section-pad bg-white border-y border-border-slate">
+      <section className="section-pad bg-brand-parchment-light border-y border-brand-charcoal/15 relative">
+        <div className="absolute top-2 left-6 text-[8px] font-technical text-brand-charcoal/20 uppercase">
+          INDEX REFERENCE // CMC-PORTFOLIO-R0
+        </div>
+        
         <ScrollReveal>
           <SectionHeading
             eyebrow="Precision Parts Portfolio"
-            title="Engineered Components Showcase"
+            title="Engineered Components Catalogue"
             subtitle="Explore our portfolio of high-grade drivetrain, hydraulic pump, and valve actuator components machined to standard tolerances."
             center
           />
@@ -226,31 +309,38 @@ export default function Home() {
 
         <div className="text-center">
           <Link to="/products" className="btn-outline">
-            Browse Full Catalogue <ArrowUpRight size={16} />
+            BROWSE FULL SPECIFICATIONS <ArrowUpRight size={14} className="text-brand-brass" />
           </Link>
         </div>
       </section>
 
       {/* ── ── WHY PARTNER WITH US ── ── */}
-      <section className="section-pad bg-light-bg">
+      <section className="section-pad relative overflow-hidden">
+        
+        <div className="watercolor-wash-brass bottom-10 right-10" />
+
         <ScrollReveal>
           <SectionHeading
-            eyebrow="Key Advantages"
-            title="Industrial Partnership Capabilities"
-            subtitle="Why major OEMs consistently rely on Cross Manufacturing Company for their critical components."
+            eyebrow="Capabilities & Values"
+            title="B2B OEM Manufacturing Integration"
+            subtitle="Why major industrial OEMs consistently rely on Cross Manufacturing Company for their critical components."
             center
           />
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
           {whyChooseUs.map((item, i) => (
-            <ScrollReveal key={item.title} delay={i * 0.1}>
-              <div className="bg-white border border-border-slate rounded-xl p-6 shadow-clean hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
-                <div className="w-10 h-10 rounded-lg bg-brand-blue/10 flex items-center justify-center mb-5">
+            <ScrollReveal key={item.title} delay={i * 0.08}>
+              <div className="bg-brand-parchment-light border border-brand-charcoal/10 p-6 transition-all duration-300 hover:border-brand-brass hover:shadow-premium relative">
+                
+                {/* Thin top highlighted bar */}
+                <div className="absolute top-0 left-0 right-0 h-[2px] bg-transparent group-hover:bg-brand-brass transition-colors" />
+
+                <div className="w-10 h-10 border border-brand-charcoal/10 flex items-center justify-center mb-5 bg-brand-parchment">
                   {iconMap[item.icon]}
                 </div>
-                <h3 className="font-heading font-700 text-lg text-text-dark mb-2">{item.title}</h3>
-                <p className="text-text-muted text-sm leading-relaxed">{item.description}</p>
+                <h3 className="font-serif-heading font-bold text-lg text-brand-charcoal mb-2">{item.title}</h3>
+                <p className="text-brand-charcoal/60 font-serif-heading font-light text-sm leading-relaxed">{item.description}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -258,31 +348,33 @@ export default function Home() {
       </section>
 
       {/* ── ── AWARD HIGHLIGHT ── ── */}
-      <section className="section-pad bg-white border-t border-border-slate">
+      <section className="section-pad bg-brand-parchment-light border-t border-brand-charcoal/15">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <div className="bg-slate-900 text-white rounded-2xl p-8 md:p-12 relative overflow-hidden border border-slate-800 shadow-xl">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-brand-blue/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="bg-brand-charcoal text-white p-8 md:p-12 relative border border-brand-brass/25">
+              {/* Blueprint lines on dark banner */}
+              <div className="absolute inset-0 blueprint-grid opacity-[0.15] pointer-events-none" />
+              <div className="absolute top-2 right-4 text-[7px] font-technical text-brand-parchment/20">DWG REF: KAIZEN-2016-TAFE</div>
 
               <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
-                <div className="w-20 h-20 rounded-full bg-brand-blue flex items-center justify-center shrink-0 shadow-lg text-white">
+                <div className="w-20 h-20 border border-brand-brass/30 bg-white/5 flex items-center justify-center shrink-0 text-brand-brass shadow-lg">
                   <Award size={36} />
                 </div>
 
                 <div>
-                  <span className="inline-block text-brand-blue-light text-xs font-heading font-700 uppercase tracking-widest mb-2">
-                    TAFE OEM Recognition
+                  <span className="inline-block text-brand-brass font-technical text-[9px] uppercase tracking-widest mb-2">
+                    OEM AUDIT EXCELLENCE
                   </span>
-                  <h3 className="font-heading font-800 text-2xl md:text-3xl leading-tight text-white mb-3">
+                  <h3 className="font-serif-heading text-2xl md:text-3xl leading-tight text-white mb-3">
                     Awarded TAFE Best KAIZEN Honor
                   </h3>
-                  <p className="text-slate-300 text-sm leading-relaxed mb-4">
-                    Tractors and Farm Equipment Limited (TAFE) recognized Cross Manufacturing Company in November 2016 for exceptional implementation of manufacturing KAIZEN practices, waste reductions, and supply reliability.
+                  <p className="text-brand-parchment/70 font-serif-heading font-light text-sm leading-relaxed mb-4">
+                    Tractors and Farm Equipment Limited (TAFE) recognized Cross Manufacturing Company for exceptional implementation of manufacturing KAIZEN practices, shopfloor layout optimization, and zero-defect delivery records.
                   </p>
-                  <div className="flex items-center gap-6 text-xs text-slate-400 font-heading font-600 uppercase tracking-wider">
+                  <div className="flex items-center gap-6 text-[8px] font-technical text-brand-parchment/40 uppercase tracking-wider">
                     <span>Year: 2016</span>
                     <span>·</span>
-                    <span>Auditor: TAFE Management</span>
+                    <span>Verified: TAFE Management</span>
                   </div>
                 </div>
               </div>
@@ -292,23 +384,24 @@ export default function Home() {
       </section>
 
       {/* ── ── CTA REPRESENTATIVE BANNER ── ── */}
-      <section className="bg-slate-900 text-white py-16 px-4 md:px-8 border-t border-slate-800">
-        <div className="max-w-5xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+      <section className="bg-brand-charcoal text-white py-20 px-6 md:px-8 border-t border-brand-charcoal/40 relative">
+        <div className="absolute inset-0 blueprint-grid opacity-[0.1] pointer-events-none" />
+        <div className="max-w-5xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10">
           <div>
-            <h3 className="font-heading font-800 text-2xl md:text-3xl mb-2 text-white">
-              Request Technical Consultation
+            <h3 className="font-serif-heading text-2xl md:text-3xl mb-2 text-white font-medium">
+              Submit OEM Technical RFQ
             </h3>
-            <p className="text-slate-400 text-sm max-w-xl">
-              Submit your RFQ sheets, tolerance drawings or product descriptions to our technical representatives for quick estimations.
+            <p className="text-brand-parchment/50 font-serif-heading italic text-sm max-w-xl font-light">
+              Submit your AutoCAD drawings, tolerance limits sheets, and estimated batch volumes for technical cycle-time calculations.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 shrink-0">
-            <a href={siteConfig.emailHref} className="btn-primary">
-              <Mail size={16} /> Submit RFQ / Email
+          <div className="flex flex-col sm:flex-row gap-4 shrink-0 font-technical text-xs">
+            <a href={siteConfig.emailHref} className="btn-primary !border-brand-brass/40 hover:!border-brass bg-brand-charcoal text-white hover:bg-brand-charcoal/80">
+              <Mail size={14} className="text-brand-brass" /> EMAIL TECHNICAL PLANS
             </a>
-            <a href={siteConfig.phoneHref} className="btn-outline !bg-transparent !text-white hover:!bg-white/10 !border-white/20">
-              <Phone size={16} /> Contact Office
+            <a href={siteConfig.phoneHref} className="btn-secondary !text-brand-parchment !border-brand-parchment/20 hover:!border-white">
+              <Phone size={14} className="text-brand-brass" /> CONTACT SALES
             </a>
           </div>
         </div>

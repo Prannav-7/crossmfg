@@ -18,24 +18,26 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ── Top Corporate Bar ── */}
-      <div className="hidden md:flex bg-slate-900 border-b border-slate-800 py-2.5 text-xs text-slate-300 font-medium">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-10 flex justify-between w-full items-center">
+      {/* ── Top Technical Header Bar ── */}
+      <div className="hidden md:flex bg-brand-charcoal border-b border-brand-charcoal/20 py-2 text-[9px] text-brand-parchment/60 font-technical uppercase tracking-widest">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-12 flex justify-between w-full items-center">
           <div className="flex items-center gap-6">
-            <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              TAFE KAIZEN Award Winner
+            <span className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-brass animate-pulse" />
+              DWG EST: 1989-10-12
             </span>
-            <span className="text-slate-500">|</span>
-            <span>ISO 9001:2015 Standards</span>
+            <span className="text-brand-parchment/20">|</span>
+            <span>TOLERANCE SPEC: ISO 2768-F</span>
+            <span className="text-brand-parchment/20">|</span>
+            <span className="text-brand-brass font-bold">★ TAFE KAIZEN AWARD RECIPIENT</span>
           </div>
           <div className="flex items-center gap-6">
-            <a href={siteConfig.emailHref} className="flex items-center gap-2 hover:text-brand-blue-light transition-colors">
-              <Mail size={13} className="text-brand-blue-light" /> {siteConfig.email}
+            <a href={siteConfig.emailHref} className="flex items-center gap-2 hover:text-brand-brass transition-colors">
+              <Mail size={11} className="text-brand-brass" /> {siteConfig.email}
             </a>
-            <span className="text-slate-500">|</span>
-            <a href={siteConfig.phoneHref} className="flex items-center gap-2 hover:text-brand-blue-light transition-colors">
-              <Phone size={13} className="text-brand-blue-light" /> {siteConfig.phone}
+            <span className="text-brand-parchment/20">|</span>
+            <a href={siteConfig.phoneHref} className="flex items-center gap-2 hover:text-brand-brass transition-colors">
+              <Phone size={11} className="text-brand-brass" /> {siteConfig.phone}
             </a>
           </div>
         </div>
@@ -45,39 +47,47 @@ export default function Navbar() {
       <nav
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-slate-200 py-3'
-            : 'bg-white border-b border-slate-100 py-4'
+            ? 'bg-brand-parchment-light/95 backdrop-blur-md border-b border-brand-charcoal/20 py-3.5 shadow-sm'
+            : 'bg-brand-parchment border-b border-brand-charcoal/10 py-5'
         }`}
       >
-        <div className="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-10 flex items-center justify-between">
+        {/* Fine coordinate numbering bar */}
+        <div className="absolute top-0 left-0 right-0 h-[3px] flex justify-between px-8 text-[6px] font-technical text-brand-charcoal/20 select-none pointer-events-none">
+          <span>X: 1440</span>
+          <span>Y: 080</span>
+          <span>Z: REF</span>
+        </div>
+
+        <div className="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-12 flex items-center justify-between">
           
-          {/* Logo Brand */}
-          <Link to="/" onClick={closeMenu} className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-brand-blue flex items-center justify-center text-white shadow-sm transition-transform hover:rotate-12 duration-300">
-              <Settings size={22} className="animate-spin-slow" />
+          {/* Logo Brand (Designed like a drafting blueprint stamp) */}
+          <Link to="/" onClick={closeMenu} className="flex items-center gap-3 group">
+            <div className="w-10 h-10 rounded-none bg-brand-charcoal flex items-center justify-center text-brand-parchment transition-transform hover:rotate-90 duration-500 border border-brand-brass relative">
+              <Settings size={20} className="animate-spin-slow text-brand-brass" />
+              <div className="absolute inset-0.5 border border-brand-parchment/10" />
             </div>
             <div>
-              <p className="font-heading font-800 text-text-dark text-lg leading-tight tracking-tight uppercase">
-                Cross <span className="text-brand-blue">Mfg Co.</span>
+              <p className="font-serif-heading font-bold text-brand-charcoal text-xl leading-tight tracking-wide">
+                CROSS <span className="font-light text-brand-charcoal/70">MFG CO.</span>
               </p>
-              <p className="text-[10px] font-heading font-700 tracking-wider text-text-muted uppercase">
-                Precision Engineering
+              <p className="text-[8px] font-technical tracking-[0.2em] text-brand-brass uppercase leading-none mt-0.5">
+                Precision Machining
               </p>
             </div>
           </Link>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center gap-1.5">
+          <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <NavLink
                 key={link.path}
                 to={link.path}
                 end={link.path === '/'}
                 className={({ isActive }) =>
-                  `px-4 py-2 rounded-md font-heading font-700 text-sm tracking-wide transition-all ${
+                  `px-4 py-2 font-technical text-[10px] tracking-widest uppercase transition-all duration-350 ${
                     isActive
-                      ? 'text-brand-blue bg-brand-blue/5'
-                      : 'text-text-muted hover:text-text-dark hover:bg-slate-50'
+                      ? 'text-brand-charcoal font-bold border-b border-brand-brass'
+                      : 'text-brand-charcoal/60 hover:text-brand-charcoal hover:border-b hover:border-brand-charcoal/30'
                   }`
                 }
               >
@@ -91,18 +101,18 @@ export default function Navbar() {
             href={siteConfig.emailHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex btn-primary text-xs !py-2.5 !px-5"
+            className="hidden md:inline-flex btn-primary !py-2.5 !px-5"
           >
-            <Mail size={14} /> Get a Quote
+            <Mail size={12} className="text-brand-brass" /> RFQ SUBMISSION
           </a>
 
           {/* Mobile hamburger menu */}
           <button
             onClick={() => setMenuOpen((v) => !v)}
-            className="md:hidden p-2 rounded-lg text-text-muted hover:text-text-dark hover:bg-slate-100 transition-colors"
+            className="md:hidden p-2 text-brand-charcoal hover:bg-brand-charcoal/5 transition-colors border border-brand-charcoal/10"
             aria-label="Toggle menu"
           >
-            {menuOpen ? <X size={22} /> : <Menu size={22} />}
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
@@ -113,10 +123,10 @@ export default function Navbar() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.2 }}
-              className="md:hidden overflow-hidden bg-white border-t border-slate-100 shadow-lg"
+              transition={{ duration: 0.25 }}
+              className="md:hidden overflow-hidden bg-brand-parchment-light border-t border-brand-charcoal/15 shadow-sm"
             >
-              <div className="px-4 py-4 flex flex-col gap-1.5">
+              <div className="px-4 py-5 flex flex-col gap-1.5">
                 {navLinks.map((link) => (
                   <NavLink
                     key={link.path}
@@ -124,22 +134,22 @@ export default function Navbar() {
                     end={link.path === '/'}
                     onClick={closeMenu}
                     className={({ isActive }) =>
-                      `px-4 py-3 rounded-lg font-heading font-700 text-sm transition-all ${
+                      `px-4 py-3 font-technical text-xs tracking-wider uppercase transition-all ${
                         isActive
-                          ? 'text-brand-blue bg-brand-blue/5'
-                          : 'text-text-muted hover:text-text-dark hover:bg-slate-50'
+                          ? 'text-brand-charcoal font-bold bg-brand-charcoal/5 border-l-2 border-brand-brass'
+                          : 'text-brand-charcoal/60 hover:text-brand-charcoal hover:bg-brand-charcoal/5'
                       }`
                     }
                   >
                     {link.label}
                   </NavLink>
                 ))}
-                <div className="border-t border-slate-100 mt-2 pt-3 flex flex-col gap-2.5 px-4">
-                  <a href={siteConfig.emailHref} className="flex items-center gap-2 text-text-muted text-xs font-heading font-600">
-                    <Mail size={14} className="text-brand-blue" /> {siteConfig.email}
+                <div className="border-t border-brand-charcoal/10 mt-3 pt-4 flex flex-col gap-3 px-4">
+                  <a href={siteConfig.emailHref} className="flex items-center gap-2 text-brand-charcoal/70 text-xs font-technical uppercase tracking-wide">
+                    <Mail size={13} className="text-brand-brass" /> {siteConfig.email}
                   </a>
-                  <a href={siteConfig.phoneHref} className="flex items-center gap-2 text-text-muted text-xs font-heading font-600">
-                    <Phone size={14} className="text-brand-blue" /> {siteConfig.phone}
+                  <a href={siteConfig.phoneHref} className="flex items-center gap-2 text-brand-charcoal/70 text-xs font-technical uppercase tracking-wide">
+                    <Phone size={13} className="text-brand-brass" /> {siteConfig.phone}
                   </a>
                 </div>
               </div>
