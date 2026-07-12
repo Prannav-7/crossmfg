@@ -63,7 +63,7 @@ export default function ProductCard({ product }) {
           {product.name}
         </h3>
         
-        <p className="text-brand-charcoal/60 font-serif-heading font-light italic text-xs leading-relaxed mb-4 line-clamp-2">
+        <p className="text-brand-charcoal/85 font-body text-xs md:text-sm leading-relaxed mb-4 line-clamp-2">
           {product.description}
         </p>
 

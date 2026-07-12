@@ -26,7 +26,7 @@ export default function Quality() {
           <h1 className="font-serif-heading text-4xl md:text-5xl lg:text-6xl text-white font-light mt-2">
             Quality Assurance
           </h1>
-          <p className="text-brand-parchment/50 font-serif-heading italic mt-4 max-w-xl mx-auto text-sm leading-relaxed">
+          <p className="text-brand-parchment/85 font-body mt-4 max-w-xl mx-auto text-sm leading-relaxed">
             Maintaining robust process control, calibration standardizations, and audited quality gates to satisfy OEM compliance.
           </p>
         </div>
@@ -52,7 +52,7 @@ export default function Quality() {
                 Corporate Quality Commitment
               </h2>
               
-              <p className="text-brand-charcoal/70 font-serif-heading font-light italic text-base leading-relaxed max-w-2xl mx-auto mb-8">
+              <p className="text-brand-charcoal/90 font-body italic text-base leading-relaxed max-w-2xl mx-auto mb-8">
                 "Cross Manufacturing Company is committed to providing precision engineering solutions that align with client blueprint drawings and delivery schedules. We achieve this by enforcing a zero-defect mindset, structured process validations, and continuous employee training."
               </p>
 
@@ -98,7 +98,7 @@ export default function Quality() {
                   
                   <div className="flex-1">
                     <h4 className="font-serif-heading font-bold text-base text-brand-charcoal">{step.title}</h4>
-                    <p className="text-brand-charcoal/60 font-serif-heading font-light text-xs md:text-sm mt-1 leading-relaxed">{step.description}</p>
+                    <p className="text-brand-charcoal/85 font-body text-xs md:text-sm mt-1 leading-relaxed">{step.description}</p>
                   </div>
                   
                   {i < qualityProcess.length - 1 && (
@@ -142,7 +142,7 @@ export default function Quality() {
                   </div>
                   
                   <h4 className="font-serif-heading font-bold text-sm text-brand-charcoal mb-2">{item.name}</h4>
-                  <p className="text-brand-charcoal/60 font-serif-heading font-light text-xs leading-relaxed">{item.desc}</p>
+                  <p className="text-brand-charcoal/85 font-body text-xs md:text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -178,7 +178,7 @@ export default function Quality() {
                 
                 <p className="text-brand-parchment/40 text-xs font-technical uppercase mb-4">{award.month} {award.year}</p>
                 
-                <p className="text-brand-parchment/70 font-serif-heading font-light text-sm md:text-base leading-relaxed max-w-xl mx-auto italic">
+                <p className="text-brand-parchment/90 font-body text-sm md:text-base leading-relaxed max-w-xl mx-auto italic">
                   "{award.description}"
                 </p>
               </div>

@@ -26,7 +26,7 @@ function ContactForm() {
           <CheckCircle size={24} className="text-brand-brass" />
         </div>
         <h3 className="font-serif-heading font-bold text-xl text-brand-charcoal">RFQ Message Formatted</h3>
-        <p className="text-brand-charcoal/60 font-serif-heading italic text-sm max-w-md">
+        <p className="text-brand-charcoal/85 font-body text-sm max-w-md">
           Your system mail client has been opened. Please attach your AutoCAD/PDF blueprints and hit send to route your plans directly to customercare@crossmfg.in.
         </p>
       </div>
@@ -114,7 +114,7 @@ export default function Contact() {
           <h1 className="font-serif-heading text-4xl md:text-5xl lg:text-6xl text-white font-light mt-2">
             Submit Your Blueprint
           </h1>
-          <p className="text-brand-parchment/50 font-serif-heading italic mt-4 max-w-xl mx-auto text-sm leading-relaxed">
+          <p className="text-brand-parchment/85 font-body mt-4 max-w-xl mx-auto text-sm leading-relaxed">
             Contact our engineering division at customercare@crossmfg.in to receive estimations, cycle-time audits, and production schedules.
           </p>
         </div>
@@ -189,7 +189,7 @@ export default function Contact() {
                       </div>
                       <div>
                         <h4 className="font-serif-heading font-bold text-base text-brand-charcoal">{unit.name}</h4>
-                        <p className="text-brand-charcoal/60 font-serif-heading font-light text-xs mt-2 leading-relaxed flex items-start gap-1.5">
+                        <p className="text-brand-charcoal/85 font-body text-xs mt-2 leading-relaxed flex items-start gap-1.5">
                           <MapPin size={12} className="text-brand-brass shrink-0 mt-0.5" />
                           {unit.address}
                         </p>

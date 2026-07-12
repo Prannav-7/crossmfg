@@ -31,8 +31,8 @@ export default function SectionHeading({ eyebrow, title, subtitle, center = fals
       </div>
 
       {subtitle && (
-        <p className={`text-base md:text-lg leading-relaxed max-w-3xl font-serif-heading font-light italic ${center ? 'mx-auto' : ''} ${
-          light ? 'text-slate-300' : 'text-brand-charcoal/60'
+        <p className={`text-base md:text-lg leading-relaxed max-w-3xl font-body italic ${center ? 'mx-auto' : ''} ${
+          light ? 'text-brand-parchment/90' : 'text-brand-charcoal/85'
         }`}>
           {subtitle}
         </p>

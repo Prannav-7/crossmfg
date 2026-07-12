@@ -35,7 +35,7 @@ export default function Products() {
           <h1 className="font-serif-heading text-4xl md:text-5xl lg:text-6xl text-white font-light mt-2">
             Engineered Components
           </h1>
-          <p className="text-brand-parchment/50 font-serif-heading italic mt-4 max-w-xl mx-auto text-sm leading-relaxed">
+          <p className="text-brand-parchment/85 font-body mt-4 max-w-xl mx-auto text-sm leading-relaxed">
             High-precision components manufactured under strict ISO quality standards for tractor, hydraulics, and general engineering applications.
           </p>
         </div>
@@ -102,7 +102,7 @@ export default function Products() {
 
             {filtered.length === 0 && (
               <div className="text-center py-20 bg-brand-parchment-light border border-brand-charcoal/10">
-                <p className="text-brand-charcoal/50 font-serif-heading italic text-sm">No components available in this category currently.</p>
+                <p className="text-brand-charcoal/80 font-body text-sm">No components available in this category currently.</p>
               </div>
             )}
 
@@ -116,7 +116,7 @@ export default function Products() {
         <ScrollReveal>
           <div className="relative z-10 max-w-xl mx-auto space-y-4">
             <h3 className="font-serif-heading font-bold text-2xl text-brand-charcoal">Looking for a custom manufactured component?</h3>
-            <p className="text-brand-charcoal/60 font-serif-heading font-light text-sm italic">
+            <p className="text-brand-charcoal/85 font-body text-sm">
               Our facilities support a wide range of custom tooling and multi-axis lathe profiles. Send your CAD drawings and spec sheets to our division.
             </p>
             <div className="pt-2">

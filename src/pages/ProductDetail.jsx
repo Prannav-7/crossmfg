@@ -22,7 +22,7 @@ export default function ProductDetail() {
     return (
       <div className="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-12 py-24 text-center min-h-[70vh] flex flex-col items-center justify-center bg-brand-parchment">
         <h2 className="font-serif-heading font-bold text-3xl text-brand-charcoal mb-4">Component Not Found</h2>
-        <p className="text-brand-charcoal/60 font-serif-heading italic text-sm mb-8">The requested OEM product specifications sheet could not be located.</p>
+        <p className="text-brand-charcoal/85 font-body text-sm mb-8">The requested OEM product specifications sheet could not be located.</p>
         <Link to="/products" className="btn-primary">
           <ArrowLeft size={14} className="text-brand-brass" /> RETURN TO CATALOGUE
         </Link>
@@ -146,7 +146,7 @@ export default function ProductDetail() {
                 </h1>
 
                 {/* Long Description */}
-                <p className="text-brand-charcoal/70 font-serif-heading font-light text-sm md:text-base leading-relaxed mb-6">
+                <p className="text-brand-charcoal/90 font-body text-sm md:text-base leading-relaxed mb-6">
                   {product.description}
                 </p>
 
@@ -181,7 +181,7 @@ export default function ProductDetail() {
                 <div className="border border-brand-charcoal/10 bg-brand-parchment p-5 md:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                   <div className="space-y-1">
                     <h4 className="font-serif-heading font-bold text-sm text-brand-charcoal">Require a technical quotation?</h4>
-                    <p className="text-brand-charcoal/60 font-serif-heading italic text-xs leading-relaxed max-w-md">
+                    <p className="text-brand-charcoal/85 font-body text-xs md:text-sm leading-relaxed max-w-md">
                       Submit request emails for customized tolerances, material revisions, or high-volume B2B manufacturing schedules.
                     </p>
                   </div>

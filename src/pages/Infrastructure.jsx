@@ -27,7 +27,7 @@ export default function Infrastructure() {
           <h1 className="font-serif-heading text-4xl md:text-5xl lg:text-6xl text-white font-light mt-2">
             Infrastructure & Capacity
           </h1>
-          <p className="text-brand-parchment/50 font-serif-heading italic mt-4 max-w-xl mx-auto text-sm leading-relaxed">
+          <p className="text-brand-parchment/85 font-body mt-4 max-w-xl mx-auto text-sm leading-relaxed">
             Operating from two facilities in Chennai with advanced machining tooling, in-process gauging, and material handling systems.
           </p>
         </div>
@@ -65,12 +65,12 @@ export default function Infrastructure() {
                       {unit.name}
                     </h3>
 
-                    <div className="flex items-start gap-1.5 text-brand-charcoal/50 font-serif-heading font-light italic text-xs mb-4">
+                    <div className="flex items-start gap-1.5 text-brand-charcoal/80 font-body text-xs mb-4">
                       <MapPin size={12} className="text-brand-brass shrink-0 mt-0.5" />
                       <span>{unit.address}</span>
                     </div>
 
-                    <p className="text-brand-charcoal/70 font-serif-heading font-light text-sm leading-relaxed mb-6">
+                    <p className="text-brand-charcoal/90 font-body text-sm leading-relaxed mb-6">
                       {unit.description}
                     </p>
 
@@ -157,7 +157,7 @@ export default function Infrastructure() {
               <h3 className="font-serif-heading font-bold text-3xl leading-tight text-brand-charcoal mb-4">
                 Scalable Supply Chains
               </h3>
-              <p className="text-brand-charcoal/70 font-serif-heading font-light text-sm md:text-base leading-relaxed mb-4">
+              <p className="text-brand-charcoal/90 font-body text-sm md:text-base leading-relaxed mb-4">
                 Both facilities feature dedicated material control zones, regular tooling maintenance routines, and production shift scheduling.
               </p>
               <div className="flex items-center gap-3 font-technical text-[10px] text-brand-charcoal/70 font-bold">

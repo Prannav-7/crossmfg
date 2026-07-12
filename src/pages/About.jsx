@@ -34,7 +34,7 @@ export default function About() {
           <h1 className="font-serif-heading text-4xl md:text-5xl lg:text-6xl text-white font-light mt-2">
             Corporate Profile
           </h1>
-          <p className="text-brand-parchment/50 font-serif-heading italic mt-4 max-w-xl mx-auto text-sm leading-relaxed">
+          <p className="text-brand-parchment/85 font-body mt-4 max-w-xl mx-auto text-sm leading-relaxed">
             Delivering quality, reliability, and precision engineering expertise since 1989.
           </p>
         </div>
@@ -54,10 +54,10 @@ export default function About() {
                 title="Engineering Quality with Uncompromising Dedication"
                 subtitle="CMC was established to address the growing demand for high-grade machined components in automotive and general engineering sectors." 
               />
-              <p className="text-brand-charcoal/70 font-serif-heading font-light text-sm md:text-base leading-relaxed mb-6">
+              <p className="text-brand-charcoal/90 font-body text-sm md:text-base leading-relaxed mb-6">
                 Founded by veteran engineer Mr. T. Krishnamoorthy, Cross Manufacturing Company has transitioned from a localized machining shop into an audited, strategic supplier for major industrial OEMs. Over three decades of domain expertise enables us to execute projects with high dimensional accuracy.
               </p>
-              <p className="text-brand-charcoal/70 font-serif-heading font-light text-sm md:text-base leading-relaxed">
+              <p className="text-brand-charcoal/90 font-body text-sm md:text-base leading-relaxed">
                 Operating from two specialized units in Chennai, our workflow features rigorous control checks, regular machinery calibrations, and continuous employee skills development. Our focus remains centered on building trust through technical performance.
               </p>
             </ScrollReveal>
@@ -71,7 +71,7 @@ export default function About() {
                   </div>
                   <div>
                     <h4 className="font-serif-heading font-bold text-base text-brand-charcoal mb-1">Corporate Vision</h4>
-                    <p className="text-brand-charcoal/60 font-serif-heading font-light text-xs leading-relaxed">
+                    <p className="text-brand-charcoal/85 font-body text-xs md:text-sm leading-relaxed">
                       To be the preferred precision engineering partner for global and domestic OEMs, recognized for technical innovation, continuous development, and on-time component delivery.
                     </p>
                   </div>
@@ -83,7 +83,7 @@ export default function About() {
                   </div>
                   <div>
                     <h4 className="font-serif-heading font-bold text-base text-brand-charcoal mb-1">Mission Statement</h4>
-                    <p className="text-brand-charcoal/60 font-serif-heading font-light text-xs leading-relaxed">
+                    <p className="text-brand-charcoal/85 font-body text-xs md:text-sm leading-relaxed">
                       Manufacture high-tolerance components that satisfy strict customer blueprints while leveraging KAIZEN principles to drive production efficiency and product value.
                     </p>
                   </div>
@@ -143,7 +143,7 @@ export default function About() {
                         <h4 className="font-serif-heading font-bold text-base text-brand-charcoal mb-1">
                           {item.title}
                         </h4>
-                        <p className="text-brand-charcoal/60 font-serif-heading font-light text-xs md:text-sm leading-relaxed">
+                        <p className="text-brand-charcoal/85 font-body text-xs md:text-sm leading-relaxed">
                           {item.event}
                         </p>
                       </div>
@@ -184,7 +184,7 @@ export default function About() {
                 <h3 className="font-serif-heading font-bold text-2xl text-brand-charcoal mb-1">Mr. T. Krishnamoorthy</h3>
                 <p className="text-[10px] font-technical uppercase tracking-widest text-brand-brass mb-4">Founder & Managing Director</p>
                 
-                <p className="text-brand-charcoal/70 font-serif-heading font-light italic text-sm md:text-base leading-relaxed mb-4">
+                <p className="text-brand-charcoal/90 font-body italic text-sm md:text-base leading-relaxed mb-4">
                   "Over 35 years in manufacturing has taught us that precision is not merely a measurement, but a commitment. Our partnerships with automotive and agricultural tractor OEMs reflect our dedication to zero-defect quality and long-term operating reliability. We thank our customers for their continued trust in CMC."
                 </p>
                 <span className="text-[9px] font-technical text-brand-charcoal/40 uppercase">Mechanical Engineer // Standard Director Address</span>
@@ -201,7 +201,7 @@ export default function About() {
           <div className="max-w-2xl mx-auto relative z-10">
             <Award size={40} className="text-brand-brass mx-auto mb-4" />
             <h3 className="font-serif-heading text-2xl mb-2 text-white font-medium">Recipient of TAFE Best KAIZEN Award</h3>
-            <p className="text-brand-parchment/60 font-serif-heading font-light text-sm leading-relaxed">
+            <p className="text-brand-parchment/95 font-body text-sm leading-relaxed">
               In November 2016, Tractors and Farm Equipment Limited (TAFE) honored CMC Chennai for continuous improvement, layout efficiencies, and manufacturing waste reduction.
             </p>
           </div>

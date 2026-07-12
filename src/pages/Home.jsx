@@ -78,7 +78,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-brand-parchment/60 font-serif-heading italic text-base md:text-lg leading-relaxed max-w-xl font-light"
+                className="text-brand-parchment/90 font-body text-base md:text-lg leading-relaxed max-w-xl font-normal"
               >
                 An audited, strategic OEM supplier of high-tolerance tractor drivetrain cross journals, high-pressure hydraulic pistons, and chemical valve actuator columns.
               </motion.p>
@@ -234,10 +234,10 @@ export default function Home() {
                 title="Over 35 Years of Swiss-Grade Mechanical Craftsmanship"
                 subtitle="Established in 1989, Cross Manufacturing Company represents a cornerstone of automotive and general engineering component supply in Chennai."
               />
-              <p className="text-brand-charcoal/70 font-serif-heading font-light leading-relaxed text-sm md:text-base mb-6">
+              <p className="text-brand-charcoal/90 font-body leading-relaxed text-sm md:text-base mb-6">
                 Founded by veteran mechanical engineer **Mr. T. Krishnamoorthy**, CMC has maintained a sterling track record of precision, reliability, and engineering superiority. We produce critical components that drive tractors, control hydraulic setups, and power industrial valve systems.
               </p>
-              <p className="text-brand-charcoal/70 font-serif-heading font-light leading-relaxed text-sm md:text-base mb-8">
+              <p className="text-brand-charcoal/90 font-body leading-relaxed text-sm md:text-base mb-8">
                 Operating from Unit I in Poonamallee and Unit II in Thirumazhisai SIDCO, we house top-tier CNC machining centers, automated grinding equipment, and a fully equipped CMM laboratory to certify quality standards.
               </p>
               <Link to="/about" className="btn-primary">
@@ -340,7 +340,7 @@ export default function Home() {
                   {iconMap[item.icon]}
                 </div>
                 <h3 className="font-serif-heading font-bold text-lg text-brand-charcoal mb-2">{item.title}</h3>
-                <p className="text-brand-charcoal/60 font-serif-heading font-light text-sm leading-relaxed">{item.description}</p>
+                <p className="text-brand-charcoal/85 font-body text-sm leading-relaxed">{item.description}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -368,7 +368,7 @@ export default function Home() {
                   <h3 className="font-serif-heading text-2xl md:text-3xl leading-tight text-white mb-3">
                     Awarded TAFE Best KAIZEN Honor
                   </h3>
-                  <p className="text-brand-parchment/70 font-serif-heading font-light text-sm leading-relaxed mb-4">
+                  <p className="text-brand-parchment/90 font-body text-sm leading-relaxed mb-4">
                     Tractors and Farm Equipment Limited (TAFE) recognized Cross Manufacturing Company for exceptional implementation of manufacturing KAIZEN practices, shopfloor layout optimization, and zero-defect delivery records.
                   </p>
                   <div className="flex items-center gap-6 text-[8px] font-technical text-brand-parchment/40 uppercase tracking-wider">
@@ -391,7 +391,7 @@ export default function Home() {
             <h3 className="font-serif-heading text-2xl md:text-3xl mb-2 text-white font-medium">
               Submit OEM Technical RFQ
             </h3>
-            <p className="text-brand-parchment/50 font-serif-heading italic text-sm max-w-xl font-light">
+            <p className="text-brand-parchment/85 font-body text-sm max-w-xl font-normal">
               Submit your AutoCAD drawings, tolerance limits sheets, and estimated batch volumes for technical cycle-time calculations.
             </p>
           </div>
